@@ -54,24 +54,10 @@ public class cDeposito extends AppCompatActivity {
             }
         });
 
-        contabilita.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                azione6 ();
-            }
-        });
-
         mucca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 azione7 ();
-            }
-        });
-
-        latte.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                azione8 ();
             }
         });
 
@@ -109,18 +95,9 @@ public class cDeposito extends AppCompatActivity {
         startActivity(intent5);
     }
 
-    private void azione6 (){
-        Intent intent6 = new Intent (cDeposito.this, gContabilita.class);
-        startActivity(intent6);
-    }
-
     private void azione7 (){
         Intent intent7 = new Intent(cDeposito.this, bHomePage.class);
         startActivity(intent7);
     }
 
-    private void azione8 () {
-        Intent intent8 = new Intent (cDeposito.this, cDepositoLatte.class);
-        startActivity(intent8);
-    }
 }

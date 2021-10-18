@@ -72,20 +72,6 @@ public class dManutenzione extends AppCompatActivity {
             }
         });
 
-        contabilita.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                azione6();
-            }
-        });
-
-        immagine.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                azione7();
-            }
-        });
-
         logoMucca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,16 +93,6 @@ public class dManutenzione extends AppCompatActivity {
     private void azione5() {
         Intent intent5 = new Intent(dManutenzione.this, fServizi.class);
         startActivity(intent5);
-    }
-
-    private void azione6() {
-        Intent intent6 = new Intent(dManutenzione.this, gContabilita.class);
-        startActivity(intent6);
-    }
-
-    private void azione7() {
-        Intent intent = new Intent(dManutenzione.this, dRubricaManutenzione.class);
-        startActivity(intent);
     }
 
     private void azione8() {

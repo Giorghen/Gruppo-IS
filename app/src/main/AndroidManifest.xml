@@ -12,11 +12,6 @@
         android:roundIcon="@mipmap/icona_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light">
-        <activity android:name=".cDepositoLatte"></activity>
-        <activity android:name=".iSpese" />
-        <activity android:name=".hFatture" />
-        <activity android:name=".dRubricaManutenzione" />
-        <activity android:name=".gContabilita" />
         <activity android:name=".fServizi" />
         <activity android:name=".eOrdini" />
         <activity android:name=".dManutenzione" />

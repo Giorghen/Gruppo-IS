@@ -16,7 +16,6 @@ public class bHomePage extends AppCompatActivity {
     private Button manutenzione;
     private Button ordini;
     private Button servizi;
-    private Button contabilita;
     private ImageView user;
 
     @Override
@@ -28,7 +27,6 @@ public class bHomePage extends AppCompatActivity {
     manutenzione = (Button) findViewById(R.id.button_manutenzione);
     ordini = (Button) findViewById(R.id.button_ordini);
     servizi = (Button) findViewById(R.id.button_servizi);
-    contabilita = (Button) findViewById(R.id.button_contabilità);
     user = (ImageView) findViewById(R.id.image_user);
 
     deposito.setOnClickListener(new View.OnClickListener() {
@@ -56,13 +54,6 @@ public class bHomePage extends AppCompatActivity {
         @Override
         public void onClick(View v) {
           azione5 ();
-        }
-    });
-
-    contabilita.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v){
-            azione6 ();
         }
     });
 
@@ -103,11 +94,6 @@ public class bHomePage extends AppCompatActivity {
     private void azione5 (){
         Intent intent5 = new Intent (bHomePage.this, fServizi.class);
         startActivity(intent5);
-    }
-
-    private void azione6 (){
-        Intent intent6 = new Intent (bHomePage.this, gContabilita.class);
-        startActivity(intent6);
     }
 
 }

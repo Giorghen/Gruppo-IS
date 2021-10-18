@@ -70,13 +70,6 @@ public class fServizi extends AppCompatActivity {
             }
         });
 
-        contabilita.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                azione6 ();
-            }
-        });
-
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -98,12 +91,6 @@ public class fServizi extends AppCompatActivity {
     private void azione4 (){
         Intent intent4 = new Intent (fServizi.this, eOrdini.class);
         startActivity(intent4);
-    }
-
-
-    private void azione6 (){
-        Intent intent6 = new Intent (fServizi.this, gContabilita.class);
-        startActivity(intent6);
     }
 
     private void azione7 () {

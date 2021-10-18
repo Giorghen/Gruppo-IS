@@ -90,13 +90,6 @@ public class eOrdini extends AppCompatActivity {
             }
         });
 
-        contabilita.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                azione6 ();
-            }
-        });
-
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -184,11 +177,6 @@ public class eOrdini extends AppCompatActivity {
     private void azione5 (){
         Intent intent5 = new Intent (eOrdini.this, fServizi.class);
         startActivity(intent5);
-    }
-
-    private void azione6 (){
-        Intent intent6 = new Intent (eOrdini.this, gContabilita.class);
-        startActivity(intent6);
     }
 
     private void azione7 () {
