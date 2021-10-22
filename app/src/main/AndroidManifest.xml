@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.saf">
+    package="com.example.saf" >
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -11,13 +11,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/icona_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light">
+        android:theme="@style/Theme.AppCompat.Light" >
+        <activity
+            android:name=".registrazione"
+            android:exported="true" />
         <activity android:name=".fServizi" />
-        <activity android:name=".eOrdini" />
         <activity android:name=".dManutenzione" />
         <activity android:name=".cDeposito" />
         <activity android:name=".bHomePage" />
-        <activity android:name=".aLogin">
+        <activity android:name=".aLogin" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

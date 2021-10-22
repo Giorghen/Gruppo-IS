@@ -80,22 +80,42 @@
         app:layout_constraintTop_toBottomOf="@+id/sottotitolo_home">
 
         <Button
-            android:id="@+id/button_deposito"
+            android:id="@+id/button_catalogo"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:backgroundTint="#E9716A"
             android:gravity="center"
-            android:text="@string/deposito"
+            android:text="@string/catalogo"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_manutenzione"
+            android:id="@+id/button_info"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:backgroundTint="#E9716A"
             android:gravity="center"
-            android:text="@string/manutenzione"
+            android:text="@string/info"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_carrello"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:backgroundTint="#E9716A"
+            android:gravity="center"
+            android:text="@string/carrello"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_utente"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:backgroundTint="#E9716A"
+            android:gravity="center"
+            android:text="@string/area_utente"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -105,27 +125,7 @@
             android:layout_height="85dp"
             android:backgroundTint="#E9716A"
             android:gravity="center"
-            android:text="@string/gestione_ordini"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/button_servizi"
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:backgroundTint="#E9716A"
-            android:gravity="center"
-            android:text="@string/gestione_servizi"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/button_contabilità"
-            android:layout_width="match_parent"
-            android:layout_height="85dp"
-            android:backgroundTint="#E9716A"
-            android:gravity="center"
-            android:text="@string/contabilit"
+            android:text="@string/ordini_effettuati"
             android:textSize="18sp"
             android:textStyle="bold" />
     </LinearLayout>

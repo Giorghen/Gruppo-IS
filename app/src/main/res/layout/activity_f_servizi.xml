@@ -77,48 +77,48 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button_deposito4"
+            android:id="@+id/button_catalogo5"
             android:layout_width="75dp"
             android:layout_height="match_parent"
             android:backgroundTint="#E9716A"
-            android:text="@string/deposito"
+            android:text="@string/catalogo"
             android:textSize="10sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_manutenzione4"
+            android:id="@+id/button_info5"
             android:layout_width="110dp"
             android:layout_height="match_parent"
             android:backgroundTint="#E9716A"
-            android:text="@string/manutenzione"
+            android:text="@string/info"
             android:textSize="10sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_ordini4"
+            android:id="@+id/button_carrello5"
             android:layout_width="75dp"
             android:layout_height="match_parent"
             android:backgroundTint="#E9716A"
-            android:text="@string/gestione_ordini"
+            android:text="@string/carrello"
             android:textSize="10sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_servizi4"
+            android:id="@+id/button_utente5"
             android:layout_width="75dp"
             android:layout_height="match_parent"
             android:backgroundTint="#868686"
             android:textColor="#ffffff"
-            android:text="@string/gestione_servizi"
+            android:text="@string/area_utente"
             android:textSize="10sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_contabilità4"
+            android:id="@+id/button_ordini5"
             android:layout_width="90dp"
             android:layout_height="match_parent"
             android:backgroundTint="#E9716A"
-            android:text="@string/contabilit"
+            android:text="@string/ordini_effettuati"
             android:textSize="10sp"
             android:textStyle="bold" />
 

@@ -23,10 +23,9 @@ public class bHomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b_home_page);
 
-    deposito = (Button) findViewById(R.id.button_deposito);
-    manutenzione = (Button) findViewById(R.id.button_manutenzione);
-    ordini = (Button) findViewById(R.id.button_ordini);
-    servizi = (Button) findViewById(R.id.button_servizi);
+    deposito = (Button) findViewById(R.id.button_catalogo);
+    manutenzione = (Button) findViewById(R.id.button_info);
+    servizi = (Button) findViewById(R.id.button_utente);
     user = (ImageView) findViewById(R.id.image_user);
 
     deposito.setOnClickListener(new View.OnClickListener() {
@@ -40,13 +39,6 @@ public class bHomePage extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             azione3 ();
-        }
-    });
-
-    ordini.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            azione4 ();
         }
     });
 
@@ -84,11 +76,6 @@ public class bHomePage extends AppCompatActivity {
     private void azione3 (){
         Intent intent3 = new Intent (bHomePage.this, dManutenzione.class);
         startActivity(intent3);
-    }
-
-    private void azione4 (){
-        Intent intent4 = new Intent (bHomePage.this, eOrdini.class);
-        startActivity(intent4);
     }
 
     private void azione5 (){

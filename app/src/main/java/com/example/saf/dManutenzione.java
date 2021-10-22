@@ -26,7 +26,6 @@ public class dManutenzione extends AppCompatActivity {
         setContentView(R.layout.activity_d_manutenzione);
 
         deposito = (Button) findViewById(R.id.button_deposito2_1);
-        ordini = (Button) findViewById(R.id.button_ordini2_1);
         servizi = (Button) findViewById(R.id.button_servizi2_1);
         contabilita = (Button) findViewById(R.id.button_contabilità2_1);
         immagine = (ImageView) findViewById(R.id.image_rubrica);
@@ -58,13 +57,6 @@ public class dManutenzione extends AppCompatActivity {
             }
         });
 
-        ordini.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                azione4();
-            }
-        });
-
         servizi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,11 +75,6 @@ public class dManutenzione extends AppCompatActivity {
     private void azione2() {
         Intent intent2 = new Intent(dManutenzione.this, cDeposito.class);
         startActivity(intent2);
-    }
-
-    private void azione4() {
-        Intent intent4 = new Intent(dManutenzione.this, eOrdini.class);
-        startActivity(intent4);
     }
 
     private void azione5() {

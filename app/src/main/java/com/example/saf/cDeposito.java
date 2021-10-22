@@ -25,10 +25,9 @@ public class cDeposito extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_c_deposito);
 
-        manutenzione = (Button) findViewById(R.id.button_manutenzione1);
-        ordini = (Button) findViewById(R.id.button_ordini1);
-        servizi = (Button) findViewById(R.id.button_servizi1);
-        contabilita = (Button) findViewById(R.id.button_contabilità1);
+        manutenzione = (Button) findViewById(R.id.button_catalogo1);
+        servizi = (Button) findViewById(R.id.button_utente1);
+        contabilita = (Button) findViewById(R.id.button_ordini1);
         mucca = (ImageView) findViewById(R.id.logo_deposito);
         latte = (Button) findViewById(R.id.bottone_Visualizza);
         user = (ImageView) findViewById(R.id.image_user);
@@ -37,13 +36,6 @@ public class cDeposito extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 azione3 ();
-            }
-        });
-
-        ordini.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                azione4 ();
             }
         });
 
@@ -83,11 +75,6 @@ public class cDeposito extends AppCompatActivity {
     private void azione3 (){
         Intent intent3 = new Intent (cDeposito.this, dManutenzione.class);
         startActivity(intent3);
-    }
-
-    private void azione4 (){
-        Intent intent4 = new Intent (cDeposito.this, eOrdini.class);
-        startActivity(intent4);
     }
 
     private void azione5 (){

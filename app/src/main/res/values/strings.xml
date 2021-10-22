@@ -10,14 +10,14 @@
     <string name="button1">Button1</string>
     <string name="button2">Button2</string>
     <string name="button">Button</string>
-    <string name="deposito">Deposito</string>
-    <string name="manutenzione">Manutenzione</string>
-    <string name="gestione_ordini">Gestione Ordini</string>
-    <string name="gestione_servizi">Gestione Servizi</string>
+    <string name="catalogo">Catalogo</string>
+    <string name="info">Informazioni</string>
+    <string name="carrello">Carrello</string>
+    <string name="area_utente">Area Utente</string>
     <string name="mucca">TODO</string>
     <string name="user1">TODO</string>
     <string name="s_a_f_milk_smart_artificial_farming_milky">S.A.F. MILK SMART ARTIFICIAL FARMING MILKY</string>
-    <string name="contabilit">Contabilità</string>
+    <string name="ordini_effettuati">Ordini Effettuati</string>
     <string name="todo">TODO</string>
     <string name="logo">TODO</string>
     <string name="user">TODO</string>
@@ -72,10 +72,10 @@
     <string name="litri">Litri</string>
     <string name="gradi">Gradi</string>
     <string name="lista_ordini">Lista Ordini</string>
-    <string name="nome_cliente">Nome Cliente</string>
-    <string name="prodotti_quantit">ProdottiQuantità</string>
-    <string name="data_consegna">Data Consegna</string>
-    <string name="aggiungi_ordine">Aggiungi Ordine</string>
+    <string name="nome_cliente">Nome</string>
+    <string name="cognome_cliente">Cognome</string>
+    <string name="email_cliente">Email</string>
+    <string name="registrazione">Registrazione</string>
     <string name="nomi_dei_dipendenti">Nomi dei dipendenti</string>
     <string name="orari">Orari</string>
     <string name="mansione">Mansione</string>
@@ -99,5 +99,7 @@
     <string name="data">Data</string>
     <string name="turni_dei_dipendenti">Turni dei Dipendenti</string>
     <string name="aggiungi_il_contenitore">Aggiungi il contenitore</string>
+    <string name="button_registra">Registrati</string>
+    <string name="password_cliente">Password</string>
 
 </resources>

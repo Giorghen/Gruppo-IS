@@ -26,7 +26,6 @@ public class fServizi extends AppCompatActivity {
 
         deposito = (Button) findViewById(R.id.button_deposito4);
         manutenzione = (Button) findViewById(R.id.button_manutenzione4);
-        ordini = (Button) findViewById(R.id.button_ordini4);
         contabilita = (Button) findViewById(R.id.button_contabilità4);
         logo = (ImageView) findViewById(R.id.logo_servizi);
         user = (ImageView) findViewById(R.id.image_user);
@@ -63,13 +62,6 @@ public class fServizi extends AppCompatActivity {
             }
         });
 
-        ordini.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                azione4 ();
-            }
-        });
-
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,11 +78,6 @@ public class fServizi extends AppCompatActivity {
     private void azione3 (){
         Intent intent3 = new Intent (fServizi.this, dManutenzione.class);
         startActivity(intent3);
-    }
-
-    private void azione4 (){
-        Intent intent4 = new Intent (fServizi.this, eOrdini.class);
-        startActivity(intent4);
     }
 
     private void azione7 () {
