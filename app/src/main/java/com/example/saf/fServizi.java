@@ -24,9 +24,9 @@ public class fServizi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_servizi);
 
-        deposito = (Button) findViewById(R.id.button_deposito4);
+        /*deposito = (Button) findViewById(R.id.button_deposito4);
         manutenzione = (Button) findViewById(R.id.button_manutenzione4);
-        contabilita = (Button) findViewById(R.id.button_contabilità4);
+        contabilita = (Button) findViewById(R.id.button_contabilità4);*/
         logo = (ImageView) findViewById(R.id.logo_servizi);
         user = (ImageView) findViewById(R.id.image_user);
 

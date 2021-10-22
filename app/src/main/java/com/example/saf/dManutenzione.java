@@ -25,9 +25,9 @@ public class dManutenzione extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_d_manutenzione);
 
-        deposito = (Button) findViewById(R.id.button_deposito2_1);
+        /*deposito = (Button) findViewById(R.id.button_deposito3);
         servizi = (Button) findViewById(R.id.button_servizi2_1);
-        contabilita = (Button) findViewById(R.id.button_contabilità2_1);
+        contabilita = (Button) findViewById(R.id.button_contabilità2_1);*/
         immagine = (ImageView) findViewById(R.id.image_rubrica);
         logoMucca = (ImageView) findViewById(R.id.logo_manutenzione);
         user = (ImageView) findViewById(R.id.image_user);

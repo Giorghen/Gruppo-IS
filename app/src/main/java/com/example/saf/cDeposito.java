@@ -29,7 +29,7 @@ public class cDeposito extends AppCompatActivity {
         servizi = (Button) findViewById(R.id.button_utente1);
         contabilita = (Button) findViewById(R.id.button_ordini1);
         mucca = (ImageView) findViewById(R.id.logo_deposito);
-        latte = (Button) findViewById(R.id.bottone_Visualizza);
+        /*latte = (Button) findViewById(R.id.bottone_Visualizza);*/
         user = (ImageView) findViewById(R.id.image_user);
 
         manutenzione.setOnClickListener(new View.OnClickListener() {

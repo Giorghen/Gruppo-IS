@@ -63,10 +63,10 @@
     <string name="visualizza_contenitori">Visualizza contenitori</string>
     <string name="contenitore_1">Contenitore 1</string>
     <string name="_100_litri">100 litri</string>
-    <string name="rimuovi_contenitore">Rimuovi contenitore</string>
+    <string name="aggiungi_carrello">Aggiungi al carrello</string>
     <string name="_4_c">4°C</string>
     <string name="_1000_litri">1000 litri</string>
-    <string name="deposito_controllo_dei_contenitori">Deposito: Controllo dei Contenitori</string>
+    <string name="elenco_prodotti">Elenco dei prodotti</string>
     <string name="aggiungi_contenitore">Aggiungi Contenitore</string>
     <string name="nome_contenitore">Nome Contenitore</string>
     <string name="litri">Litri</string>

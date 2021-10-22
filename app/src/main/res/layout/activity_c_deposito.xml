@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".cDeposito">
+    android:background="#ffffff">
 
     <ImageView
         android:id="@+id/logo_deposito"
@@ -75,14 +74,98 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="50dp"
-        android:text="@string/deposito_controllo_dei_contenitori"
+        android:text="@string/elenco_prodotti"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/Image_contenitore_Latte"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sottotitolo_deposito" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:gravity="center">
+
+        <ScrollView
+            android:layout_width="300dp"
+            android:layout_height="325dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/scroll_color">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+                <Button
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:text="titolo"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/barra_botton1"
@@ -140,39 +223,9 @@
             android:textSize="10sp"
             android:textStyle="bold" />
 
+
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/Image_contenitore_Latte"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="10dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toTopOf="@+id/bottone_Visualizza"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sottotitolo_deposito"
-        app:srcCompat="@drawable/contenitore" />
-
-    <Button
-        android:id="@+id/bottone_Visualizza"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginBottom="50dp"
-        android:background="#868686"
-        android:text="@string/visualizza_contenitori"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/barra_botton1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Image_contenitore_Latte" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
