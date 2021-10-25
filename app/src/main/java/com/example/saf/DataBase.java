@@ -17,6 +17,7 @@ public class DataBase extends SQLiteOpenHelper {
 
     private static final String TABLE_NAME= "saf_ordini";
     private static final String COLUMN_ID= "_id";
+    private static final String COLUMN_NOME_PROD= "nome_prodotto";
     private static final String COLUMN_DESCRIZIONE= "descrizione";
     private static final String COLUMN_PREZZO= "prezzo";
 
@@ -28,6 +29,13 @@ public class DataBase extends SQLiteOpenHelper {
     private static final String COLUMN_EMAIL= "email";
     private static final String COLUMN_PASSWORD= "password";
 
+    private static final String TABLE_NAME3= "saf_prodotti";
+    private static final String COLUMN_PROD_ID= "_id";
+    private static final String COLUMN_PROD_NOME= "nome";
+    private static final String COLUMN_PROD_DES= "descrizione";
+    private static final String COLUMN_PROD_PREZZO= "prezzo";
+    private static final String COLUMN_PROD_QUANTIT= "quantita";
+
     public DataBase(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -37,8 +45,9 @@ public class DataBase extends SQLiteOpenHelper {
 
         String query= "CREATE TABLE " + TABLE_NAME + " (" +
                 COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_NOME_PROD + " TEXT, " +
                 COLUMN_DESCRIZIONE + " TEXT, " +
-                COLUMN_PREZZO + " FLOAT);";
+                COLUMN_PREZZO + " DOUBLE);";
         db.execSQL(query);
 
         String query2= "CREATE TABLE " + TABLE_NAME2 + " (" +
@@ -50,6 +59,15 @@ public class DataBase extends SQLiteOpenHelper {
                 COLUMN_PASSWORD + " TEXT);";
 
         db.execSQL(query2);
+
+        String query3= "CREATE TABLE " + TABLE_NAME3 + " (" +
+                COLUMN_PROD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                COLUMN_PROD_NOME + " TEXT, " +
+                COLUMN_PROD_DES + " TEXT, " +
+                COLUMN_PROD_QUANTIT + " INTEGER, " +
+                COLUMN_PROD_PREZZO + " DOUBLE);";
+
+        db.execSQL(query3);
     }
 
     @Override
@@ -57,6 +75,7 @@ public class DataBase extends SQLiteOpenHelper {
 
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME3);
         onCreate(db);
     }
 
@@ -98,11 +117,12 @@ public class DataBase extends SQLiteOpenHelper {
      * @param des
      * @param prezzo
      */
-    public void aggiungiOrdine (String des, float prezzo){
+    public void aggiungiOrdine (String nome, String des, double prezzo){
 
         SQLiteDatabase db= this.getWritableDatabase();
         ContentValues cn= new ContentValues();
 
+        cn.put(COLUMN_NOME_PROD, nome);
         cn.put(COLUMN_DESCRIZIONE, des);
         cn.put(COLUMN_PREZZO, prezzo);
 
@@ -148,7 +168,7 @@ public class DataBase extends SQLiteOpenHelper {
      * Restituisce tutto il conetenuto della tabella ordini
      * @return cursor
      */
-    Cursor visualizzazioneTabellaOrdini(){
+    public Cursor visualizzazioneTabellaOrdini(){
 
         String query= "SELECT * FROM " + TABLE_NAME;
         SQLiteDatabase db= this.getReadableDatabase();
@@ -193,4 +213,49 @@ public class DataBase extends SQLiteOpenHelper {
         }
 
     }
+
+    /**
+     * Restituisce ntutto il contenuto della tabella prodotti
+     * @return prodotti
+     */
+    public Cursor visualizzazioneTabellaProdotti(){
+
+        String query= "SELECT * FROM " + TABLE_NAME3;
+        SQLiteDatabase db= this.getReadableDatabase();
+        Cursor cursor= null;
+
+        if (db != null){
+            cursor= db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    /**
+     * Inserisce un nuovo prodotto all'interno del database
+     * @param nome
+     * @param descrizione
+     * @param prezzo
+     * @param quantit
+     */
+    public void inserimentoNuovoProdotto(String nome, String descrizione, double prezzo, int quantit){
+
+        SQLiteDatabase db= this.getWritableDatabase();
+        ContentValues cn= new ContentValues();
+
+        cn.put(COLUMN_PROD_NOME, nome);
+        cn.put(COLUMN_PROD_DES, descrizione);
+        cn.put(COLUMN_PROD_PREZZO, prezzo);
+        cn.put(COLUMN_PROD_QUANTIT, quantit);
+
+        long result= db.insert(TABLE_NAME3, null, cn);
+
+        if(result == -1){
+            System.out.println ("Errore nell'inserimento del nuovo prodotto \n");
+        }
+        else{
+            System.out.println ("Successo nell'inserimento del nuovo prodotto \n");
+        }
+
+    }
+
 }
