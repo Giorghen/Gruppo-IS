@@ -5,7 +5,6 @@
     <string name="button_accedi">Accedi</string>
     <string name="inserisci_e_mail">Inserisci e-mail</string>
     <string name="password">Password</string>
-    <string name="image">TODO</string>
     <string name="welcome">Welcome</string>
     <string name="button1">Button1</string>
     <string name="button2">Button2</string>
@@ -14,14 +13,8 @@
     <string name="info">Informazioni</string>
     <string name="carrello">Carrello</string>
     <string name="area_utente">Area Utente</string>
-    <string name="mucca">TODO</string>
-    <string name="user1">TODO</string>
     <string name="s_a_f_milk_smart_artificial_farming_milky">S.A.F. MILK SMART ARTIFICIAL FARMING MILKY</string>
-    <string name="ordini_effettuati">Ordini Effettuati</string>
-    <string name="todo">TODO</string>
-    <string name="logo">TODO</string>
-    <string name="user">TODO</string>
-    <string name="consumo">Consumo</string>
+    <string name="ordini_effettuati">Ordini Effettuati</string>ing>
     <string name="nome_macchinari">Nome Macchinari</string>
     <string name="status">Status</string>
     <string name="confezionatrice">Confezionatrice</string>
@@ -35,7 +28,6 @@
     <string name="guasto">Guasto</string>
     <string name="condizioni_dei_macchinari">Condizioni dei Macchinari</string>
     <string name="ditte_di_manutenzione">Ditte di Manutenzione</string>
-    <string name="image_rub">TODO</string>
     <string name="s_a_f_milky">S.A.F. MILKY</string>
     <string name="smart_artificial_farming_milky">SMART ARTIFICIAL FARMING MILKY</string>
     <string name="rubrica">Rubrica</string>

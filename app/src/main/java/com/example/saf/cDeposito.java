@@ -19,6 +19,18 @@ public class cDeposito extends AppCompatActivity {
     private ImageView mucca;
     private Button latte;
     private ImageView user;
+    private Button prod1;
+    private Button prod2;
+    private Button prod3;
+    private Button prod4;
+    private Button prod5;
+    private Button prod6;
+    private Button prod7;
+    private Button prod8;
+    private Button prod9;
+    private Button prod10;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +43,17 @@ public class cDeposito extends AppCompatActivity {
         mucca = (ImageView) findViewById(R.id.logo_deposito);
         /*latte = (Button) findViewById(R.id.bottone_Visualizza);*/
         user = (ImageView) findViewById(R.id.image_user);
+        prod1= findViewById(R.id.prodotto1);
+        prod2= findViewById(R.id.prodotto2);
+        prod3= findViewById(R.id.prodotto3);
+        prod4= findViewById(R.id.prodotto4);
+        prod5= findViewById(R.id.prodotto5);
+        prod6= findViewById(R.id.prodotto6);
+        prod7= findViewById(R.id.prodotto7);
+        prod8= findViewById(R.id.prodotto8);
+        prod9= findViewById(R.id.prodotto9);
+        prod10= findViewById(R.id.prodotto10);
+
 
         manutenzione.setOnClickListener(new View.OnClickListener() {
             @Override

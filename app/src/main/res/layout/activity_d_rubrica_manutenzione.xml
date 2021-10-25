@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context=".dRubricaManutenzione">
+    android:background="#ffffff">
 
     <ImageView
         android:id="@+id/logo_rubrica"
@@ -13,7 +12,6 @@
         android:layout_height="120dp"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/nome_rubrica"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +59,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="100dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/sottotitolo_rubrica"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/logo_rubrica"
@@ -164,7 +161,6 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/lista"
         app:layout_constraintEnd_toStartOf="@+id/text_ditte"
         app:layout_constraintStart_toStartOf="parent"
@@ -178,7 +174,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="5dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/barra_botton1"
         app:layout_constraintEnd_toStartOf="@+id/image_rimuovi"
         app:layout_constraintHorizontal_bias="0.5"
@@ -193,7 +188,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="5dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/barra_botton1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_rimuovi"
@@ -220,7 +214,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="5dp"
-        android:contentDescription="@string/todo"
         android:src="@drawable/rimuovi"
         app:layout_constraintBottom_toTopOf="@+id/barra_botton1"
         app:layout_constraintEnd_toStartOf="@+id/image_telefono"

@@ -13,7 +13,6 @@
         android:layout_height="120dp"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/nome_Manutenzione"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +60,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="100dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/sottotitolo_Manutenzione"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/logo_manutenzione"
@@ -69,7 +67,7 @@
         app:srcCompat="@drawable/user" />
 
     <LinearLayout
-               android:id="@+id/barra_bottoni"
+        android:id="@+id/barra_bottoni"
         android:layout_width="413dp"
         android:layout_height="70dp"
         android:layout_marginEnd="6dp"
@@ -166,7 +164,6 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo1"
                 android:gravity="center"
-                android:text="@string/consumo"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -436,7 +433,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="20dp"
-        android:contentDescription="@string/image_rub"
         app:layout_constraintBottom_toTopOf="@+id/barra_bottoni"
         app:layout_constraintEnd_toStartOf="@+id/text_ditte"
         app:layout_constraintStart_toStartOf="parent"

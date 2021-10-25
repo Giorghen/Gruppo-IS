@@ -12,7 +12,6 @@
         android:layout_height="120dp"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/nome_deposito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +58,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="100dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/sottotitolo_deposito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/logo_deposito"
@@ -103,60 +101,70 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:id="@+id/prodotto1"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto2"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto3"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto4"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto5"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto6"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto7"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto8"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto9"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
                     android:text="titolo"/>
 
                 <Button
+                    android:id="@+id/prodotto10"
                     android:layout_width="300dp"
                     android:layout_height="match_parent"
                     android:background="#FFFFFF"
