@@ -29,12 +29,6 @@ public class DataBase extends SQLiteOpenHelper {
     private static final String COLUMN_EMAIL= "email";
     private static final String COLUMN_PASSWORD= "password";
 
-    private static final String TABLE_NAME3= "saf_prodotti";
-    private static final String COLUMN_PROD_ID= "_id";
-    private static final String COLUMN_PROD_NOME= "nome";
-    private static final String COLUMN_PROD_DES= "descrizione";
-    private static final String COLUMN_PROD_PREZZO= "prezzo";
-    private static final String COLUMN_PROD_QUANTIT= "quantita";
 
     public DataBase(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -60,14 +54,6 @@ public class DataBase extends SQLiteOpenHelper {
 
         db.execSQL(query2);
 
-        String query3= "CREATE TABLE " + TABLE_NAME3 + " (" +
-                COLUMN_PROD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                COLUMN_PROD_NOME + " TEXT, " +
-                COLUMN_PROD_DES + " TEXT, " +
-                COLUMN_PROD_QUANTIT + " INTEGER, " +
-                COLUMN_PROD_PREZZO + " DOUBLE);";
-
-        db.execSQL(query3);
     }
 
     @Override
@@ -75,7 +61,6 @@ public class DataBase extends SQLiteOpenHelper {
 
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME3);
         onCreate(db);
     }
 
@@ -143,7 +128,7 @@ public class DataBase extends SQLiteOpenHelper {
      * Il controllo viene effettuato con le informazioni passate come parametro
      * @param em
      * @param pw
-     * @return
+     * @return boolean
      */
     public boolean loginCliente (String em, String pw){
 
@@ -210,50 +195,6 @@ public class DataBase extends SQLiteOpenHelper {
         }
         else{
             Toast.makeText(context, "Successo modifica dati utente", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    /**
-     * Restituisce ntutto il contenuto della tabella prodotti
-     * @return prodotti
-     */
-    public Cursor visualizzazioneTabellaProdotti(){
-
-        String query= "SELECT * FROM " + TABLE_NAME3;
-        SQLiteDatabase db= this.getReadableDatabase();
-        Cursor cursor= null;
-
-        if (db != null){
-            cursor= db.rawQuery(query, null);
-        }
-        return cursor;
-    }
-
-    /**
-     * Inserisce un nuovo prodotto all'interno del database
-     * @param nome
-     * @param descrizione
-     * @param prezzo
-     * @param quantit
-     */
-    public void inserimentoNuovoProdotto(String nome, String descrizione, double prezzo, int quantit){
-
-        SQLiteDatabase db= this.getWritableDatabase();
-        ContentValues cn= new ContentValues();
-
-        cn.put(COLUMN_PROD_NOME, nome);
-        cn.put(COLUMN_PROD_DES, descrizione);
-        cn.put(COLUMN_PROD_PREZZO, prezzo);
-        cn.put(COLUMN_PROD_QUANTIT, quantit);
-
-        long result= db.insert(TABLE_NAME3, null, cn);
-
-        if(result == -1){
-            System.out.println ("Errore nell'inserimento del nuovo prodotto \n");
-        }
-        else{
-            System.out.println ("Successo nell'inserimento del nuovo prodotto \n");
         }
 
     }

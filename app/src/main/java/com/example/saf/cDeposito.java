@@ -181,43 +181,43 @@ public class cDeposito extends AppCompatActivity {
     }
 
     private void azione1 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione2 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione3 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione4 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione5 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione6 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione7 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione8 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione9 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
     private void azione10 (){
-        db.inserimentoNuovoProdotto("Mozzarella DOP","Rigorosamente prodotto con latte fresco senza conservanti", 5.0, 10);
+
     }
 
 }
