@@ -12,7 +12,6 @@
         android:layout_height="120dp"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/nome_contenitore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +57,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="100dp"
-        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/sottotitolo_contenitore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/logo_contenitore"
@@ -83,7 +81,6 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="75dp"
-        android:contentDescription="@string/todo"
         android:layout_marginLeft="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nome_contenitore"/>

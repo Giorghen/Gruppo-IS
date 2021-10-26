@@ -34,14 +34,14 @@ public class myAdapter extends ArrayAdapter <Tipo>{
 
         View view= inflater.inflate(R.layout.contenitori, null);
 
-        TextView testoNome= view.findViewById(R.id.nomeContenitore);
+        /*TextView testoNome= view.findViewById(R.id.nomeContenitore);
         TextView testoLitri= view.findViewById(R.id.litriContenitore);
         TextView testoGradi= view.findViewById(R.id.temperaturaContenitore);
-        ImageView imageCont= view.findViewById(R.id.immagine);
+        ImageView imageCont= view.findViewById(R.id.immagine);*/
 
         Tipo tip = lista.get(position);
 
-        testoNome.setText(tip.getNome());
+       /* testoNome.setText(tip.getNome());
         testoLitri.setText(tip.getLitri());
         testoGradi.setText(tip.getGradi());
         imageCont.setImageDrawable(cont.getResources().getDrawable(tip.getImag()));
@@ -52,7 +52,7 @@ public class myAdapter extends ArrayAdapter <Tipo>{
 
                 remuveItem(position);
             }
-        });
+        });*/
         return view;
     }
 
