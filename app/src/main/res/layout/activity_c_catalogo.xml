@@ -89,8 +89,7 @@
             android:layout_width="300dp"
             android:layout_height="275dp"
             android:paddingTop="1dp"
-            android:paddingBottom="1dp"
-            android:background="@drawable/scroll_color">
+            android:paddingBottom="1dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
