@@ -65,6 +65,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user" />
 
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/telefono"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barra_bottoni"
+        app:layout_constraintBottom_toBottomOf="@id/Tabella"/>
+
     <LinearLayout
         android:id="@+id/barra_bottoni"
         android:layout_width="413dp"
@@ -73,8 +82,7 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_rubrica">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/button_catalogo3"
@@ -126,54 +134,60 @@
 
     <TableLayout
         android:id="@+id/Tabella"
-        android:layout_width="352dp"
-        android:layout_height="210dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/image_rubrica"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewManuten"
-        app:layout_constraintVertical_bias="0.51">
+        app:layout_constraintTop_toBottomOf="@+id/textViewManuten">
 
         <TableRow
             android:id="@+id/prima_riga"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bordo1"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
             <TextView
-                android:id="@+id/text_nome_macchina"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
+                android:id="@+id/text_nome_azienda"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
                 android:background="@drawable/bordo1"
                 android:gravity="center"
-                android:text="@string/nome_macchinari"
+                android:text="@string/nomi"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_consumo"
+                android:id="@+id/text_indirizzo"
                 android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_height="75dp"
                 android:background="@drawable/bordo1"
                 android:gravity="center"
+                android:text="@string/indirizzi"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_status"
+                android:id="@+id/text_email"
                 android:layout_width="100dp"
-                android:layout_height="50dp"
+                android:layout_height="75dp"
                 android:background="@drawable/bordo1"
                 android:gravity="center"
-                android:text="@string/status"
+                android:text="@string/email"
+                android:textColor="#F5000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_giorni"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:background="@drawable/bordo1"
+                android:gravity="center"
+                android:text="@string/giorni"
                 android:textColor="#F5000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -188,24 +202,22 @@
 
             <TextView
                 android:id="@+id/nome_macchina"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/confezionatrice"
+                android:text="rth"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="199dp"
-                tools:layout_editor_absoluteY="305dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_basso"
                 android:layout_width="100dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/basso"
+                android:text="rte"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 android:textStyle="bold"
@@ -213,17 +225,27 @@
                 tools:layout_editor_absoluteY="233dp" />
 
             <TextView
-                android:id="@+id/text_buono"
+                android:id="@+id/text_buon"
                 android:layout_width="100dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/buono"
+                android:text="et"
                 android:textColor="#F5000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="224dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_buo"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo2"
+                android:gravity="center"
+                android:text="tgo"
+                android:textColor="#F5000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
         </TableRow>
 
         <TableRow
@@ -234,42 +256,48 @@
 
             <TextView
                 android:id="@+id/nome_macchina1"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo1"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/taglia_pasta"
+                android:text="gar"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="199dp"
-                tools:layout_editor_absoluteY="305dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_alto"
                 android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo1"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/alto"
+                android:text="frgt"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="131dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_revisione"
+                android:id="@+id/text_revision"
                 android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo1"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/revisione"
+                android:text="rggh"
                 android:textColor="#F5000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="224dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_revisio"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo2"
+                android:gravity="center"
+                android:text="tyre"
+                android:textColor="#F5000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
         </TableRow>
 
         <TableRow
@@ -280,111 +308,47 @@
 
             <TextView
                 android:id="@+id/nome_macchina3"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
                 android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/filatrici"
+                android:text="uyuu"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="199dp"
-                tools:layout_editor_absoluteY="305dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_guasto"
                 android:layout_width="100dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/costante"
+                android:text="bhy"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="131dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_costant"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo2"
+                android:gravity="center"
+                android:text="mio"
+                android:textColor="#F5000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_costante"
                 android:layout_width="100dp"
-                android:layout_height="30dp"
+                android:layout_height="50dp"
                 android:background="@drawable/bordo2"
                 android:gravity="center"
-                android:text="@string/guasto"
+                android:text="yuio"
                 android:textColor="#F5000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="224dp"
-                tools:layout_editor_absoluteY="233dp" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/quinta_riga"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bordo1"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/nome_vuoto"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo1"
-                android:gravity="center"
-                android:textColor="#000000"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/consumo_vuoto"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo1"
-                android:gravity="center"
-                android:textColor="#000000"
-                />
-
-            <TextView
-                android:id="@+id/status_vuoto"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo1"
-                android:gravity="center"
-                android:textColor="#F5000000" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/sesta_riga"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bordo1"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/nome_vuoto1"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/consumo_vuoto1"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/status_vuoto1"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:textColor="#F5000000" />
+                android:textStyle="bold" />
 
         </TableRow>
 
@@ -399,7 +363,7 @@
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="8dp"
         android:gravity="center"
-        android:text="@string/condizioni_dei_macchinari"
+        android:text="@string/informazioni_azienda"
         android:textColor="#050505"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -408,33 +372,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/sottotitolo_Manutenzione" />
 
-    <TextView
-        android:id="@+id/text_ditte"
-        android:layout_width="195dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="20dp"
-        android:text="@string/ditte_di_manutenzione"
-        android:textColor="#660000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/barra_bottoni"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/image_rubrica"
-        app:layout_constraintTop_toBottomOf="@+id/Tabella" />
-
-    <ImageView
-        android:id="@+id/image_rubrica"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/barra_bottoni"
-        app:layout_constraintEnd_toStartOf="@+id/text_ditte"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Tabella"
-        app:srcCompat="@drawable/rubrica" />
 </androidx.constraintlayout.widget.ConstraintLayout>

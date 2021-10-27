@@ -27,76 +27,80 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="@string/aggiungi_a_fatturato"
+            android:text="@string/sezione_acquisti"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/data_fattura"
+            android:id="@+id/nome_titolare"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="20dp"
-            android:hint="@string/data"
+            android:hint="@string/nome_titolare"
             android:textColorHint="#FD000000">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/data_fattura1"
+                android:id="@+id/nome_titolare0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/nome_cliente0"
+                android:id="@+id/numero_carta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="#000000">
+                android:hint="@string/numero_carta"
+                android:textColorHint="#000000"
+                android:inputType="number">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/nome_cliente"
+                    android:id="@+id/numero_carta0"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/nome" />
+                    android:layout_height="wrap_content" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/descrizione"
+                android:id="@+id/cvv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColorHint="#FD000000">
+                android:hint="@string/cvv"
+                android:textColorHint="#FD000000"
+                android:inputType="number">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/descrizione0"
+                    android:id="@+id/cvv0"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/descrizione"
-                    android:textColorHint="#000000" />
+                    android:layout_height="wrap_content" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/importo"
+                    android:id="@+id/consegna"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:hint="@string/indirizzo_consenga"
                     android:textColorHint="#000000">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/importo0"
+                        android:id="@+id/consegna0"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/importo" />
+                        android:layout_height="wrap_content" />
+
                 </com.google.android.material.textfield.TextInputLayout>
+
             </com.google.android.material.textfield.TextInputLayout>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/salva_in_fatturato"
+            android:id="@+id/acquisto"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
             android:background="#868686"
-            android:text="@string/aggiungi_a_fatturato"
+            android:text="@string/acquista"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -108,6 +112,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:background="@android:drawable/btn_dialog"
-        android:contentDescription="@string/textclose"></ImageView>
+        android:contentDescription="@string/textclose" />
 
 </RelativeLayout>

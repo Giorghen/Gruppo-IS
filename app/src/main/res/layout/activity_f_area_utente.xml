@@ -148,7 +148,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="@string/orari"
+                android:text="Nome"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -157,9 +157,9 @@
                 android:id="@+id/text_dipendente"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo3"
+                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text="@string/nomi_dei_dipendenti"
+                android:text=""
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -168,9 +168,9 @@
                 android:id="@+id/text_mansione"
                 android:layout_width="150dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo3"
+                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text="@string/mansione"
+                android:text=""
                 android:textColor="#F5000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -187,14 +187,12 @@
                 android:id="@+id/nome_orari"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:background="@drawable/bordo4"
+                android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="@string/_5_00_13_00"
+                android:text="Cognome"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="199dp"
-                tools:layout_editor_absoluteY="305dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_dipendente0"
@@ -202,12 +200,10 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text="@string/alessandro_rossi"
+                android:text=""
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="131dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_mansione0"
@@ -215,12 +211,10 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text="@string/produzione"
+                android:text=""
                 android:textColor="#F5000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="224dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -235,38 +229,32 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="@string/_8_00_16_00"
+                android:text="Indirizzo"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="199dp"
-                tools:layout_editor_absoluteY="305dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_dipendente1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo3"
+                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text="@string/emanuela_rossi"
+                android:text=""
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="131dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_mansione1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo3"
+                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text="@string/confezionamento"
+                android:text=""
                 android:textColor="#F5000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="224dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -279,14 +267,12 @@
                 android:id="@+id/nome_orari2"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:background="@drawable/bordo4"
+                android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="@string/_12_00_20_00"
+                android:text="Email"
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="199dp"
-                tools:layout_editor_absoluteY="305dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_dipendente2"
@@ -294,12 +280,10 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text="@string/giovanna_rossi"
+                android:text=""
                 android:textColor="#000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="131dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_mansione2"
@@ -307,12 +291,10 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text="@string/bancone"
+                android:text=""
                 android:textColor="#F5000000"
                 android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="224dp"
-                tools:layout_editor_absoluteY="233dp" />
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
@@ -329,6 +311,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo3"
                 android:gravity="center"
+                android:text="Password"
                 android:textColor="#000000"
                 android:textSize="14sp" />
 
@@ -336,46 +319,12 @@
                 android:id="@+id/dipendenti_vuoto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo3"
+                android:background="@drawable/bordo4"
                 android:gravity="center"
                 android:textColor="#000000" />
 
             <TextView
                 android:id="@+id/mansione_vuoto"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bordo3"
-                android:gravity="center"
-                android:textColor="#F5000000" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/sesta_riga"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/bordo4"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/orario_vuoto1"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo4"
-                android:gravity="center"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/dipendente_vuoto1"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/bordo4"
-                android:gravity="center"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/mansione_vuoto1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/bordo4"
@@ -394,7 +343,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="5dp"
-        android:text="@string/turni_dei_dipendenti"
+        android:text="@string/info_utenti"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -402,4 +351,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sottotitolo_servizi" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

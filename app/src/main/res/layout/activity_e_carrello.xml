@@ -72,58 +72,74 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="500dp">
+            android:layout_height="300dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nome_prodotto1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:text="@string/contenitore_1"
+                android:textColor="#D81B60"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sottotitolo_contabilita"/>
 
-                <TextView
-                    android:id="@+id/nome_prodotto1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/contenitore_1"
-                    android:textColor="#D81B60"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/sottotitolo_contabilita"/>
+            <ImageView
+                android:id="@+id/immagine_prodotto1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nome_contenitore"/>
 
-                <ImageView
-                    android:id="@+id/immagine_prodotto1"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nome_contenitore"/>
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_marginTop="-100dp"
+                android:layout_marginLeft="175dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/quantita" />
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_marginTop="-100dp"
-                    android:layout_marginLeft="175dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/quantita" />
-
-                <TextView
-                    android:id="@+id/prezzo_prodotto1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/_4_c"
-                    android:textColor="#FA000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_marginLeft="175dp"/>
+            <TextView
+                android:id="@+id/prezzo_prodotto1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/_4_c"
+                android:textColor="#FA000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="175dp"/>
 
             </LinearLayout>
 
         </ScrollView>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/acquista"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="#868686"
+            android:text="@string/acquista"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="450dp"
+            android:layout_marginLeft="10dp"/>
     </LinearLayout>
 
     <LinearLayout

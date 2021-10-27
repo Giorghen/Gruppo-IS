@@ -16,7 +16,6 @@ public class dInformazioni extends AppCompatActivity {
     private Button carrello;
     private Button utente;
     private Button ordini;
-    private ImageView immagine;
     private ImageView logoMucca;
     private ImageView user;
 
@@ -29,7 +28,6 @@ public class dInformazioni extends AppCompatActivity {
         carrello = (Button) findViewById(R.id.button_carrello3);
         utente = (Button) findViewById(R.id.button_utente3);
         ordini = (Button) findViewById(R.id.button_ordini3);
-        immagine = (ImageView) findViewById(R.id.image_rubrica);
         logoMucca = (ImageView) findViewById(R.id.logo_manutenzione);
         user = (ImageView) findViewById(R.id.image_user);
 
