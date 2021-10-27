@@ -12,10 +12,11 @@ import android.widget.ImageView;
 
 public class dManutenzione extends AppCompatActivity {
 
-    private Button deposito;
+    private Button catalogo;
+    private Button informazioni;
+    private Button carrello;
+    private Button utente;
     private Button ordini;
-    private Button servizi;
-    private Button contabilita;
     private ImageView immagine;
     private ImageView logoMucca;
     private ImageView user;
@@ -25,9 +26,11 @@ public class dManutenzione extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_d_manutenzione);
 
-        /*deposito = (Button) findViewById(R.id.button_deposito3);
-        servizi = (Button) findViewById(R.id.button_servizi2_1);
-        contabilita = (Button) findViewById(R.id.button_contabilità2_1);*/
+        catalogo = (Button) findViewById(R.id.button_catalogo3);
+        informazioni = (Button) findViewById(R.id.button_info3);
+        carrello = (Button) findViewById(R.id.button_carrello3);
+        utente = (Button) findViewById(R.id.button_utente3);
+        ordini = (Button) findViewById(R.id.button_ordini3);
         immagine = (ImageView) findViewById(R.id.image_rubrica);
         logoMucca = (ImageView) findViewById(R.id.logo_manutenzione);
         user = (ImageView) findViewById(R.id.image_user);
@@ -50,41 +53,41 @@ public class dManutenzione extends AppCompatActivity {
             }
         });
 
-        deposito.setOnClickListener(new View.OnClickListener() {
+        catalogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                azione1();
+            }
+        });
+
+        informazioni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 azione2();
             }
         });
 
-        servizi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                azione5();
-            }
-        });
-
         logoMucca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                azione8();
+                azione3();
             }
         });
     }
 
+    private void azione1() {
+        Intent intent1 = new Intent(dManutenzione.this, cDeposito.class);
+        startActivity(intent1);
+    }
+
     private void azione2() {
-        Intent intent2 = new Intent(dManutenzione.this, cDeposito.class);
+        Intent intent2 = new Intent(dManutenzione.this, fServizi.class);
         startActivity(intent2);
     }
 
-    private void azione5() {
-        Intent intent5 = new Intent(dManutenzione.this, fServizi.class);
-        startActivity(intent5);
-    }
-
-    private void azione8() {
-        Intent intent = new Intent(dManutenzione.this, bHomePage.class);
-        startActivity(intent);
+    private void azione3() {
+        Intent intent3 = new Intent(dManutenzione.this, bHomePage.class);
+        startActivity(intent3);
 
     }
 }

@@ -101,12 +101,12 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="30dp"
+        android:contentDescription="@string/image"
         app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sottotitolo_login"
-        app:srcCompat="@drawable/user"
-        tools:ignore="ImageContrastCheck" />
+        app:srcCompat="@drawable/user" />
 
     <ImageView
         android:id="@+id/image_logo"
@@ -116,6 +116,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="5dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/nome_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

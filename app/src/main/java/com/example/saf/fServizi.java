@@ -12,10 +12,11 @@ import android.widget.ImageView;
 
 public class fServizi extends AppCompatActivity {
 
-    private Button deposito;
-    private Button manutenzione;
+    private Button catalogo;
+    private Button informazioni;
+    private Button carrello;
+    private Button utente;
     private Button ordini;
-    private Button contabilita;
     private ImageView logo;
     private ImageView user;
 
@@ -24,9 +25,11 @@ public class fServizi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_servizi);
 
-        /*deposito = (Button) findViewById(R.id.button_deposito4);
-        manutenzione = (Button) findViewById(R.id.button_manutenzione4);
-        contabilita = (Button) findViewById(R.id.button_contabilità4);*/
+        catalogo = (Button) findViewById(R.id.button_catalogo5);
+        informazioni = (Button) findViewById(R.id.button_info5);
+        carrello = (Button) findViewById(R.id.button_carrello5);
+        utente = (Button) findViewById(R.id.button_utente5);
+        ordini = (Button) findViewById(R.id.button_ordini5);
         logo = (ImageView) findViewById(R.id.logo_servizi);
         user = (ImageView) findViewById(R.id.image_user);
 
@@ -48,40 +51,40 @@ public class fServizi extends AppCompatActivity {
             }
         });
 
-        deposito.setOnClickListener(new View.OnClickListener() {
+        catalogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                azione1 ();
+            }
+        });
+
+        informazioni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 azione2 ();
             }
         });
 
-        manutenzione.setOnClickListener(new View.OnClickListener() {
+        logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 azione3 ();
             }
         });
+    }
 
-        logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                azione7 ();
-            }
-        });
+    private void azione1 (){
+        Intent intent1 = new Intent(fServizi.this, cDeposito.class);
+        startActivity(intent1);
     }
 
     private void azione2 (){
-        Intent intent2 = new Intent(fServizi.this, cDeposito.class);
+        Intent intent2 = new Intent (fServizi.this, dManutenzione.class);
         startActivity(intent2);
     }
 
-    private void azione3 (){
-        Intent intent3 = new Intent (fServizi.this, dManutenzione.class);
+    private void azione3 () {
+        Intent intent3 = new Intent (fServizi.this, bHomePage.class);
         startActivity(intent3);
-    }
-
-    private void azione7 () {
-        Intent intent7 = new Intent (fServizi.this, bHomePage.class);
-        startActivity(intent7);
     }
 }

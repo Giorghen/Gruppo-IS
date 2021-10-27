@@ -17,7 +17,6 @@ public class cDeposito extends AppCompatActivity {
     private Button servizi;
     private Button contabilita;
     private ImageView mucca;
-    private Button latte;
     private ImageView user;
     private Button prod1;
     private Button prod2;
@@ -42,7 +41,6 @@ public class cDeposito extends AppCompatActivity {
         servizi = (Button) findViewById(R.id.button_utente1);
         contabilita = (Button) findViewById(R.id.button_ordini1);
         mucca = (ImageView) findViewById(R.id.logo_deposito);
-        /*latte = (Button) findViewById(R.id.bottone_Visualizza);*/
         user = (ImageView) findViewById(R.id.image_user);
         prod1= findViewById(R.id.prodotto1);
         prod2= findViewById(R.id.prodotto2);

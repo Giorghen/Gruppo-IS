@@ -12,10 +12,11 @@ import android.widget.ImageView;
 
 public class bHomePage extends AppCompatActivity {
 
-    private Button deposito;
-    private Button manutenzione;
+    private Button catalogo;
+    private Button informazioni;
+    private Button carrello;
+    private Button utente;
     private Button ordini;
-    private Button servizi;
     private ImageView user;
 
     @Override
@@ -23,29 +24,31 @@ public class bHomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b_home_page);
 
-    deposito = (Button) findViewById(R.id.button_catalogo);
-    manutenzione = (Button) findViewById(R.id.button_info);
-    servizi = (Button) findViewById(R.id.button_utente);
+    catalogo = (Button) findViewById(R.id.button_catalogo);
+    informazioni = (Button) findViewById(R.id.button_info);
+    carrello = (Button) findViewById(R.id.button_utente);
+    utente = (Button) findViewById(R.id.button_utente);
+    ordini = (Button) findViewById(R.id.button_ordini);
     user = (ImageView) findViewById(R.id.image_user);
 
-    deposito.setOnClickListener(new View.OnClickListener() {
+    catalogo.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            azione1 ();
+        }
+    });
+
+    informazioni.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             azione2 ();
         }
     });
 
-    manutenzione.setOnClickListener(new View.OnClickListener() {
+    carrello.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            azione3 ();
-        }
-    });
-
-    servizi.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-          azione5 ();
+          azione3 ();
         }
     });
 
@@ -68,19 +71,19 @@ public class bHomePage extends AppCompatActivity {
     });
     }
 
+    private void azione1 (){
+        Intent intent1 = new Intent(bHomePage.this, cDeposito.class);
+        startActivity(intent1);
+    }
+
     private void azione2 (){
-        Intent intent2 = new Intent(bHomePage.this, cDeposito.class);
+        Intent intent2 = new Intent (bHomePage.this, dManutenzione.class);
         startActivity(intent2);
     }
 
     private void azione3 (){
-        Intent intent3 = new Intent (bHomePage.this, dManutenzione.class);
+        Intent intent3 = new Intent (bHomePage.this, fServizi.class);
         startActivity(intent3);
-    }
-
-    private void azione5 (){
-        Intent intent5 = new Intent (bHomePage.this, fServizi.class);
-        startActivity(intent5);
     }
 
 }

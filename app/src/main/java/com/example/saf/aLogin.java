@@ -46,5 +46,4 @@ public class aLogin extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
-    }
+}

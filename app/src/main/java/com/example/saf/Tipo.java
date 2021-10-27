@@ -3,16 +3,17 @@ package com.example.saf;
 public class Tipo {
 
     int imag;
-    String nome, litri, gradi;
+    String nome, descrizione;
+    Double prezzo;
 
-    public Tipo(int imag, String nome, String litri, String gradi) {
+    public Tipo(int imag, String nome, String desc, Double prezzo) {
         this.imag = imag;
         this.nome = nome;
-        this.litri = litri;
-        this.gradi = gradi;
+        this.descrizione = desc;
+        this.prezzo = prezzo;
     }
 
-    public int getImag() {
+    public int getImage() {
         return imag;
     }
 
@@ -20,11 +21,11 @@ public class Tipo {
         return nome;
     }
 
-    public String getLitri() {
-        return litri;
+    public String getDesc() {
+        return descrizione;
     }
 
-    public String getGradi() {
-        return gradi;
+    public Double getPrize() {
+        return prezzo;
     }
 }

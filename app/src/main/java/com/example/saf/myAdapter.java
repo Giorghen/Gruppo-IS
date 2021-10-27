@@ -34,25 +34,18 @@ public class myAdapter extends ArrayAdapter <Tipo>{
 
         View view= inflater.inflate(R.layout.contenitori, null);
 
-        /*TextView testoNome= view.findViewById(R.id.nomeContenitore);
-        TextView testoLitri= view.findViewById(R.id.litriContenitore);
-        TextView testoGradi= view.findViewById(R.id.temperaturaContenitore);
-        ImageView imageCont= view.findViewById(R.id.immagine);*/
+        TextView testoNome= view.findViewById(R.id.nome_prodotto);
+        TextView testoDesc= view.findViewById(R.id.descrizione_prodotto);
+        TextView testoPrezzo= view.findViewById(R.id.prezzo_prodotto);
+        ImageView imageCont= view.findViewById(R.id.immagine_prodotto);
 
         Tipo tip = lista.get(position);
 
-       /* testoNome.setText(tip.getNome());
-        testoLitri.setText(tip.getLitri());
-        testoGradi.setText(tip.getGradi());
-        imageCont.setImageDrawable(cont.getResources().getDrawable(tip.getImag()));
+        testoNome.setText(tip.getNome());
+        testoDesc.setText(tip.getDesc());
+        testoPrezzo.setText(tip.getPrize().toString());
+        imageCont.setImageDrawable(cont.getResources().getDrawable(tip.getImage()));
 
-        view.findViewById(R.id.rimuoviContenitore).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                remuveItem(position);
-            }
-        });*/
         return view;
     }
 
