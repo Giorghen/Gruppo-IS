@@ -137,7 +137,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/button_catalogo6"
+            android:id="@+id/button_catalogo4"
             android:layout_width="75dp"
             android:layout_height="match_parent"
             android:backgroundTint="#E9716A"
@@ -146,7 +146,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_info6"
+            android:id="@+id/button_info4"
             android:layout_width="110dp"
             android:layout_height="match_parent"
             android:backgroundTint="#E9716A"
@@ -155,16 +155,17 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_carrello6"
+            android:id="@+id/button_carrello4"
             android:layout_width="75dp"
             android:layout_height="match_parent"
-            android:backgroundTint="#E9716A"
+            android:backgroundTint="#868686"
             android:text="@string/carrello"
+            android:textColor="#ffffff"
             android:textSize="10sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_utente6"
+            android:id="@+id/button_utente4"
             android:layout_width="75dp"
             android:layout_height="match_parent"
             android:backgroundTint="#E9716A"
@@ -173,11 +174,10 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button_ordini6"
+            android:id="@+id/button_ordini4"
             android:layout_width="90dp"
             android:layout_height="match_parent"
-            android:backgroundTint="#868686"
-            android:textColor="#ffffff"
+            android:backgroundTint="#E9716A"
             android:text="@string/ordini_effettuati"
             android:textSize="10sp"
             android:textStyle="bold" />

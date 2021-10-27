@@ -12,10 +12,10 @@ import android.widget.ImageView;
 
 public class cCatalogo extends AppCompatActivity {
 
-    private Button manutenzione;
+    private Button informazioni;
+    private Button carrello;
     private Button ordini;
-    private Button servizi;
-    private Button contabilita;
+    private Button utente;
     private ImageView mucca;
     private ImageView user;
     private Button prod1;
@@ -37,9 +37,10 @@ public class cCatalogo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_c_catalogo);
 
-        manutenzione = (Button) findViewById(R.id.button_catalogo1);
-        servizi = (Button) findViewById(R.id.button_utente1);
-        contabilita = (Button) findViewById(R.id.button_ordini1);
+        informazioni = (Button) findViewById(R.id.button_info1);
+        carrello = (Button) findViewById(R.id.button_carrello1);
+        utente = (Button) findViewById(R.id.button_utente1);
+        ordini = (Button) findViewById(R.id.button_ordini1);
         mucca = (ImageView) findViewById(R.id.logo_deposito);
         user = (ImageView) findViewById(R.id.image_user);
         prod1= findViewById(R.id.prodotto1);
@@ -123,17 +124,31 @@ public class cCatalogo extends AppCompatActivity {
             }
         });
 
-        manutenzione.setOnClickListener(new View.OnClickListener() {
+        informazioni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                azioneManutenzione ();
+                azioneInformazioni ();
             }
         });
 
-        servizi.setOnClickListener(new View.OnClickListener() {
+        carrello.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                azioneServizi ();
+                azioneCarrello ();
+            }
+        });
+
+        utente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                azioneUtente ();
+            }
+        });
+
+        ordini.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                azioneOrdini ();
             }
         });
 
@@ -163,19 +178,29 @@ public class cCatalogo extends AppCompatActivity {
         });
     }
 
-    private void azioneManutenzione (){
-        Intent intent3 = new Intent (cCatalogo.this, dInformazioni.class);
+    private void azioneInformazioni (){
+        Intent intent1 = new Intent (cCatalogo.this, dInformazioni.class);
+        startActivity(intent1);
+    }
+
+    private void azioneCarrello (){
+        Intent intent2 = new Intent (cCatalogo.this, eCarrello.class);
+        startActivity(intent2);
+    }
+
+    private void azioneUtente (){
+        Intent intent3 = new Intent(cCatalogo.this, fUtente.class);
         startActivity(intent3);
     }
 
-    private void azioneServizi (){
-        Intent intent5 = new Intent (cCatalogo.this, fUtente.class);
-        startActivity(intent5);
+    private void azioneOrdini (){
+        Intent intent4 = new Intent(cCatalogo.this, gOrdini.class);
+        startActivity(intent4);
     }
 
     private void azioneHome (){
-        Intent intent7 = new Intent(cCatalogo.this, bHomePage.class);
-        startActivity(intent7);
+        Intent intent5 = new Intent(cCatalogo.this, bHomePage.class);
+        startActivity(intent5);
     }
 
     private void azione1 (){

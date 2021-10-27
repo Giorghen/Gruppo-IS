@@ -15,7 +15,6 @@ public class fUtente extends AppCompatActivity {
     private Button catalogo;
     private Button informazioni;
     private Button carrello;
-    private Button utente;
     private Button ordini;
     private ImageView logo;
     private ImageView user;
@@ -28,7 +27,6 @@ public class fUtente extends AppCompatActivity {
         catalogo = (Button) findViewById(R.id.button_catalogo5);
         informazioni = (Button) findViewById(R.id.button_info5);
         carrello = (Button) findViewById(R.id.button_carrello5);
-        utente = (Button) findViewById(R.id.button_utente5);
         ordini = (Button) findViewById(R.id.button_ordini5);
         logo = (ImageView) findViewById(R.id.logo_servizi);
         user = (ImageView) findViewById(R.id.image_user);
@@ -54,37 +52,62 @@ public class fUtente extends AppCompatActivity {
         catalogo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                azione1 ();
+                azioneCatalogo ();
             }
         });
 
         informazioni.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                azione2 ();
+                azioneInformazioni ();
+            }
+        });
+
+        carrello.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                azioneCarrello();
+            }
+        });
+
+        ordini.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                azioneOrdini();
             }
         });
 
         logo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                azione3 ();
+                azioneHome ();
             }
         });
     }
 
-    private void azione1 (){
+    private void azioneCatalogo() {
         Intent intent1 = new Intent(fUtente.this, cCatalogo.class);
         startActivity(intent1);
     }
 
-    private void azione2 (){
-        Intent intent2 = new Intent (fUtente.this, dInformazioni.class);
+    private void azioneInformazioni() {
+        Intent intent2 = new Intent(fUtente.this, dInformazioni.class);
         startActivity(intent2);
     }
 
-    private void azione3 () {
-        Intent intent3 = new Intent (fUtente.this, bHomePage.class);
+    private void azioneCarrello() {
+        Intent intent3 = new Intent(fUtente.this, eCarrello.class);
         startActivity(intent3);
+    }
+
+    private void azioneOrdini() {
+        Intent intent4 = new Intent(fUtente.this, gOrdini.class);
+        startActivity(intent4);
+    }
+
+    private void azioneHome() {
+        Intent intent5 = new Intent(fUtente.this, bHomePage.class);
+        startActivity(intent5);
+
     }
 }
