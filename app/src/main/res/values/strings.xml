@@ -92,6 +92,18 @@
     <string name="turni_dei_dipendenti">Turni dei Dipendenti</string>
     <string name="aggiungi_il_contenitore">Aggiungi il contenitore</string>
     <string name="button_registra">Registrati</string>
+    <string name="indirizzo_cliente">Indirizzo</string>
     <string name="password_cliente">Password</string>
+    <string name="cf_cliente">Codice Fiscale</string>
+    <string name="titolo1">Caciocavallo</string>
+    <string name="titolo2">Formaggio Parmigiano</string>
+    <string name="titolo3">Gorgonzola DOP</string>
+    <string name="titolo4">Mozzarella DOP</string>
+    <string name="titolo5">Mozzarelline</string>
+    <string name="titolo6">Mozzarellona</string>
+    <string name="titolo7">Pecorino</string>
+    <string name="titolo8">Provolone</string>
+    <string name="titolo9">Ricotta di pecora</string>
+    <string name="titolo10">Treccia di Mozzarella</string>
 
 </resources>

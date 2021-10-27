@@ -32,7 +32,7 @@ public class myAdapter extends ArrayAdapter <Tipo>{
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater= LayoutInflater.from(cont);
 
-        View view= inflater.inflate(R.layout.contenitori, null);
+        View view= inflater.inflate(R.layout.activity_prodotto, null);
 
         TextView testoNome= view.findViewById(R.id.nome_prodotto);
         TextView testoDesc= view.findViewById(R.id.descrizione_prodotto);

@@ -26,7 +26,7 @@ public class bHomePage extends AppCompatActivity {
 
     catalogo = (Button) findViewById(R.id.button_catalogo);
     informazioni = (Button) findViewById(R.id.button_info);
-    carrello = (Button) findViewById(R.id.button_utente);
+    carrello = (Button) findViewById(R.id.button_carrello);
     utente = (Button) findViewById(R.id.button_utente);
     ordini = (Button) findViewById(R.id.button_ordini);
     user = (ImageView) findViewById(R.id.image_user);
@@ -48,7 +48,21 @@ public class bHomePage extends AppCompatActivity {
     carrello.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-          azione3 ();
+            azione3 ();
+        }
+    });
+
+    utente.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+           azione4 ();
+        }
+    });
+
+    ordini.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+           azione5 ();
         }
     });
 
@@ -72,18 +86,28 @@ public class bHomePage extends AppCompatActivity {
     }
 
     private void azione1 (){
-        Intent intent1 = new Intent(bHomePage.this, cDeposito.class);
+        Intent intent1 = new Intent(bHomePage.this, cCatalogo.class);
         startActivity(intent1);
     }
 
     private void azione2 (){
-        Intent intent2 = new Intent (bHomePage.this, dManutenzione.class);
+        Intent intent2 = new Intent (bHomePage.this, dInformazioni.class);
         startActivity(intent2);
     }
 
     private void azione3 (){
-        Intent intent3 = new Intent (bHomePage.this, fServizi.class);
+        Intent intent3 = new Intent (bHomePage.this, eCarrello.class);
         startActivity(intent3);
+    }
+
+    private void azione4 (){
+        Intent intent4 = new Intent (bHomePage.this, fUtente.class);
+        startActivity(intent4);
+    }
+
+    private void azione5 (){
+        Intent intent5 = new Intent (bHomePage.this, gOrdini.class);
+        startActivity(intent5);
     }
 
 }
