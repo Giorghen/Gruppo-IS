@@ -27,6 +27,8 @@ public class eCarrello extends AppCompatActivity {
     private TextView titolo;
     private TextView prezzo;
     private ImageView immagine;
+    private String titoloProvvisorio;
+    private ArrayList<? extends Tipo> prodotti= new ArrayList<Tipo>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,7 @@ public class eCarrello extends AppCompatActivity {
         titolo= (TextView) findViewById(R.id.nome_prodotto1);
         prezzo= (TextView) findViewById(R.id.prezzo_prodotto1);
         immagine= (ImageView) findViewById(R.id.immagine_prodotto1);
+        titoloProvvisorio= "";
 
 
         acquista.setOnClickListener(new View.OnClickListener() {
@@ -106,51 +109,61 @@ public class eCarrello extends AppCompatActivity {
             }
         });
 
-       String titoloProvvisorio= getIntent().getExtras().getString("nome");
 
-       titolo.setText(titoloProvvisorio);
+      /* if(getIntent().getExtras().getString("nome") != null){
 
-         switch (titoloProvvisorio){
-            case "Caciocavallo": immagine.setImageResource(R.drawable.caciocavallo);
-                prezzo.setText("€10");
-                break;
+           titoloProvvisorio= getIntent().getExtras().getString("nome");
 
-            case "Formaggio Parmigiano": immagine.setImageResource(R.drawable.formaggioparmigiano);
-                prezzo.setText("€7");
-                break;
+           titolo.setText(titoloProvvisorio);
 
-            case "Gorgonzola Dop": immagine.setImageResource(R.drawable.gorgonzoladop);
-                prezzo.setText("€15");
-                break;
+           switch (titoloProvvisorio){
+               case "Caciocavallo": immagine.setImageResource(R.drawable.caciocavallo);
+                   prezzo.setText("€10");
+                   break;
 
-            case "Mozzarella Dop": immagine.setImageResource(R.drawable.mozzarelladop);
-                prezzo.setText("€9");
-                break;
+               case "Formaggio Parmigiano": immagine.setImageResource(R.drawable.formaggioparmigiano);
+                   prezzo.setText("€7");
+                   break;
 
-            case "Mozzarelline": immagine.setImageResource(R.drawable.mozzarelline);
-                prezzo.setText("€5");
-                break;
+               case "Gorgonzola Dop": immagine.setImageResource(R.drawable.gorgonzoladop);
+                   prezzo.setText("€15");
+                   break;
 
-            case "Mozzarellona": immagine.setImageResource(R.drawable.mozzarellona);
-                prezzo.setText("€17");
-                break;
+               case "Mozzarella Dop": immagine.setImageResource(R.drawable.mozzarelladop);
+                   prezzo.setText("€9");
+                   break;
 
-            case "Pecorino": immagine.setImageResource(R.drawable.pecorino);
-                prezzo.setText("€4");
-                break;
+               case "Mozzarelline": immagine.setImageResource(R.drawable.mozzarelline);
+                   prezzo.setText("€5");
+                   break;
 
-            case "Provolone": immagine.setImageResource(R.drawable.provolone);
-                prezzo.setText("€13");
-                break;
+               case "Mozzarellona": immagine.setImageResource(R.drawable.mozzarellona);
+                   prezzo.setText("€17");
+                   break;
 
-            case "Ricotta di pecora": immagine.setImageResource(R.drawable.ricottadipecora);
-                prezzo.setText("€6");
-                break;
+               case "Pecorino": immagine.setImageResource(R.drawable.pecorino);
+                   prezzo.setText("€4");
+                   break;
 
-            case "Treccia di mozzarella": immagine.setImageResource(R.drawable.trecciadimozzarella);
-                prezzo.setText("€21");
-                break;
-        }
+               case "Provolone": immagine.setImageResource(R.drawable.provolone);
+                   prezzo.setText("€13");
+                   break;
+
+               case "Ricotta di pecora": immagine.setImageResource(R.drawable.ricottadipecora);
+                   prezzo.setText("€6");
+                   break;
+
+               case "Treccia di mozzarella": immagine.setImageResource(R.drawable.trecciadimozzarella);
+                   prezzo.setText("€21");
+                   break;
+           }
+
+       }
+       else{
+           System.out.println("La stringa è vuota");
+       }*/
+
+
     }
 
     private void azioneCatalogo() {

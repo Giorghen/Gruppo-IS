@@ -2,30 +2,26 @@ package com.example.saf;
 
 public class Tipo {
 
-    int imag;
-    String nome, descrizione;
-    Double prezzo;
+    String nome, prezzo;
 
-    public Tipo(int imag, String nome, String desc, Double prezzo) {
-        this.imag = imag;
+    public Tipo(String nome, String prezzo) {
         this.nome = nome;
-        this.descrizione = desc;
         this.prezzo = prezzo;
-    }
-
-    public int getImage() {
-        return imag;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public String getDesc() {
-        return descrizione;
+    public void setNome(String n){
+        nome= n;
     }
 
-    public Double getPrize() {
+    public String getPrize() {
         return prezzo;
+    }
+
+    public void setPrezzo(String p){
+        prezzo= p;
     }
 }

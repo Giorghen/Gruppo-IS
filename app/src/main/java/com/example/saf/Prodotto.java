@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class Prodotto extends AppCompatActivity {
 
     private Button aggiungi;
@@ -22,6 +24,7 @@ public class Prodotto extends AppCompatActivity {
     private ImageView user;
     private String titoloProvvisorio;
     private String prezzoTemp;
+    private ArrayList<Tipo> prodotti= new ArrayList<Tipo>();
 
 
     @Override
@@ -141,9 +144,12 @@ public class Prodotto extends AppCompatActivity {
          aggiungi.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
+
+                 prodotti.add(new Tipo(titoloProvvisorio, prezzoTemp));
                  Intent intent= new Intent(Prodotto.this, eCarrello.class);
                  intent.putExtra("nome", titoloProvvisorio);
                  intent.putExtra("prezzo", prezzoTemp);
+                 intent.putExtra("List", prodotti);
                  startActivity(intent);
              }
          });
