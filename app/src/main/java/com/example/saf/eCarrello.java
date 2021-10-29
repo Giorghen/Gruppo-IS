@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class eCarrello extends AppCompatActivity {
@@ -38,6 +40,9 @@ public class eCarrello extends AppCompatActivity {
         logo = (ImageView) findViewById(R.id.logo_contabilita);
         user = (ImageView) findViewById(R.id.image_user);
         acquista= (Button) findViewById(R.id.acquista);
+        titolo= (TextView) findViewById(R.id.nome_prodotto1);
+        prezzo= (TextView) findViewById(R.id.prezzo_prodotto1);
+        immagine= (ImageView) findViewById(R.id.immagine_prodotto1);
 
 
         acquista.setOnClickListener(new View.OnClickListener() {
