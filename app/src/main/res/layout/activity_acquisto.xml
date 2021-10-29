@@ -15,8 +15,8 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="fill_parent"
-        android:layout_height="435dp"
-        android:layout_below="@id/scrollable"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/scrollable"
         android:orientation="vertical"
         android:weightSum="100">
 
@@ -24,7 +24,7 @@
             android:id="@+id/text_agg_spesa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="@string/sezione_acquisti"
@@ -34,31 +34,31 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nome_titolare"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="50dp"
-            android:layout_marginRight="20dp"
             android:hint="@string/nome_titolare"
             android:textColorHint="#FD000000">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nome_titolare0"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/numero_carta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/numero_carta"
-                android:textColorHint="#000000"
-                android:inputType="number">
+                android:textColorHint="#000000">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/numero_carta0"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="number"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -67,13 +67,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/cvv"
-                android:textColorHint="#FD000000"
-                android:inputType="number">
+                android:textColorHint="#FD000000">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/cvv0"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="number"/>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/consegna"
@@ -85,7 +86,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/consegna0"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -97,7 +99,7 @@
             android:id="@+id/acquisto"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:background="#868686"
             android:text="@string/acquista"
@@ -111,7 +113,6 @@
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:background="@android:drawable/btn_dialog"
-        android:contentDescription="@string/textclose" />
+        android:background="@android:drawable/btn_dialog" />
 
 </RelativeLayout>

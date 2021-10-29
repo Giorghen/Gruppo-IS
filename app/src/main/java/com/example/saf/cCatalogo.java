@@ -204,43 +204,63 @@ public class cCatalogo extends AppCompatActivity {
     }
 
     private void azione1 (){
-
+        Intent intent6= new Intent (cCatalogo.this, Prodotto.class);
+        intent6.putExtra("nomeProdotto","Caciocavallo");
+        startActivity(intent6);
     }
 
     private void azione2 (){
-
+        Intent intent7= new Intent (cCatalogo.this, Prodotto.class);
+        intent7.putExtra("nomeProdotto","Formaggio Parmigiano");
+        startActivity(intent7);
     }
 
     private void azione3 (){
-
+        Intent intent8= new Intent (cCatalogo.this, Prodotto.class);
+        intent8.putExtra("nomeProdotto","Gorgonzola Dop");
+        startActivity(intent8);
     }
 
     private void azione4 (){
-
+        Intent intent9= new Intent (cCatalogo.this, Prodotto.class);
+        intent9.putExtra("nomeProdotto","Mozzarella Dop");
+        startActivity(intent9);
     }
 
     private void azione5 (){
-
+        Intent intent10= new Intent (cCatalogo.this, Prodotto.class);
+        intent10.putExtra("nomeProdotto","Mozzarelline");
+        startActivity(intent10);
     }
 
     private void azione6 (){
-
+        Intent intent11= new Intent (cCatalogo.this, Prodotto.class);
+        intent11.putExtra("nomeProdotto","Mozzarellona");
+        startActivity(intent11);
     }
 
     private void azione7 (){
-
+        Intent intent12= new Intent (cCatalogo.this, Prodotto.class);
+        intent12.putExtra("nomeProdotto","Pecorino");
+        startActivity(intent12);
     }
 
     private void azione8 (){
-
+        Intent intent13= new Intent (cCatalogo.this, Prodotto.class);
+        intent13.putExtra("nomeProdotto","Provolone");
+        startActivity(intent13);
     }
 
     private void azione9 (){
-
+        Intent intent14= new Intent (cCatalogo.this, Prodotto.class);
+        intent14.putExtra("nomeProdotto","Ricotta di pecora");
+        startActivity(intent14);
     }
 
     private void azione10 (){
-
+        Intent intent15= new Intent (cCatalogo.this, Prodotto.class);
+        intent15.putExtra("nomeProdotto","Treccia di mozzarella");
+        startActivity(intent15);
     }
 
 }
