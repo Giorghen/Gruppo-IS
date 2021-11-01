@@ -28,7 +28,7 @@ public class eCarrello extends AppCompatActivity {
     private TextView prezzo;
     private ImageView immagine;
     private String titoloProvvisorio;
-    private ArrayList<? extends Tipo> prodotti= new ArrayList<Tipo>();
+    private ArrayList<Tipo> prodotti= new ArrayList<Tipo>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,6 +108,10 @@ public class eCarrello extends AppCompatActivity {
                 azioneHome ();
             }
         });
+
+        if (getIntent().getStringExtra("nome") != null){
+            prodotti.add(new Tipo(getIntent().getExtras().getString("nome").toString(), getIntent().getExtras().getString("prezzo").toString()));
+        }
 
 
       /* if(getIntent().getExtras().getString("nome") != null){
