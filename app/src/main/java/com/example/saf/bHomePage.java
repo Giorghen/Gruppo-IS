@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -102,6 +103,12 @@ public class bHomePage extends AppCompatActivity {
 
     private void azione4 (){
         Intent intent4 = new Intent (bHomePage.this, fUtente.class);
+        String cf= intent4.getExtras().getString("codiceFiscale");
+        String nome= intent4.getExtras().getString("nome");
+        String cognome= intent4.getExtras().getString("cognome");
+        String indirizzo= intent4.getExtras().getString("indirizzo");
+        String email= intent4.getExtras().getString("email");
+        String password= intent4.getExtras().getString("password");
         startActivity(intent4);
     }
 

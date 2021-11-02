@@ -9,6 +9,9 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
 public class DataBase extends SQLiteOpenHelper {
 
     private Context context;
@@ -86,14 +89,7 @@ public class DataBase extends SQLiteOpenHelper {
         cn.put(COLUMN_INDIRIZZO, indirizzo);
         cn.put(COLUMN_PASSWORD, password);
 
-        long result= db.insert(TABLE_NAME2, null, cn);
-
-        if (result == -1){
-            Toast.makeText(context, "Errore inserimento cliente", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            Toast.makeText(context, "Successo inserimento cliente", Toast.LENGTH_SHORT).show();
-        }
+        db.insert(TABLE_NAME2, null, cn);
 
     }
 
@@ -130,24 +126,18 @@ public class DataBase extends SQLiteOpenHelper {
      * @param pw
      * @return boolean
      */
-    public boolean loginCliente (String em, String pw){
+    public Boolean loginCliente (String em, String pw){
 
-        boolean trovato= false;
-        Cursor cr= null;
+        SQLiteDatabase db= this.getWritableDatabase();
+        Cursor cr= db.rawQuery("SELECT * FROM " + TABLE_NAME2 + " WHERE " + COLUMN_EMAIL + " = ? AND " + COLUMN_PASSWORD + " = ?", new String[]{em, pw});
 
-        SQLiteDatabase db= this.getReadableDatabase();
-        String query= "SELECT * FROM " + TABLE_NAME2 + " WHERE " + em + " = " + COLUMN_EMAIL + " AND " + pw + " = " + COLUMN_PASSWORD;
+        if(cr.getCount() > 0)
+            return true;
 
-        if (db != null){
-            cr= db.rawQuery(query, null);
-        }
+        return false;
 
-        if (cr != null){
-            trovato= true;
-        }
-
-        return trovato;
     }
+
 
     /**
      * Restituisce tutto il conetenuto della tabella ordini
