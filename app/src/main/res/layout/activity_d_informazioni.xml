@@ -65,7 +65,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/user" />
 
-    <ImageButton
+    <ImageView
+        android:id="@+id/numero_telefono"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/telefono"

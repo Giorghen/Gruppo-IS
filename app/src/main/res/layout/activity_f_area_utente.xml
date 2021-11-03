@@ -171,6 +171,7 @@
             android:id="@+id/seconda_riga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bordo3"
             android:orientation="vertical">
 
             <TextView
@@ -181,7 +182,7 @@
                 android:gravity="center"
                 android:text="Cognome"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -192,7 +193,7 @@
                 android:gravity="center"
                 android:text=""
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -201,6 +202,8 @@
             android:id="@+id/terza_riga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bordo3"
+
             android:orientation="vertical">
 
             <TextView
@@ -211,7 +214,7 @@
                 android:gravity="center"
                 android:text="Indirizzo"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -222,7 +225,7 @@
                 android:gravity="center"
                 android:text=""
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -231,6 +234,7 @@
             android:id="@+id/quarta_riga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bordo3"
             android:orientation="vertical">
 
             <TextView
@@ -241,7 +245,7 @@
                 android:gravity="center"
                 android:text="Email"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -252,7 +256,7 @@
                 android:gravity="center"
                 android:text=""
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
         </TableRow>
 
@@ -272,7 +276,7 @@
                 android:gravity="center"
                 android:text="Password"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView

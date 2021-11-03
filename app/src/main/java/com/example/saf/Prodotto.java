@@ -29,11 +29,11 @@ public class Prodotto extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prodotto);
-         aggiungi= findViewById(R.id.aggiungi_carrello);
-         titolo= findViewById(R.id.nome_prodotto);
-         descrizione= findViewById(R.id.descrizione_prodotto);
-         prezzo= findViewById(R.id.prezzo_prodotto);
-         immagine= findViewById(R.id.immagine_prodotto);
+        aggiungi= findViewById(R.id.aggiungi_carrello);
+        titolo= findViewById(R.id.nome_prodotto);
+        descrizione= findViewById(R.id.descrizione_prodotto);
+        prezzo= findViewById(R.id.prezzo_prodotto);
+        immagine= findViewById(R.id.immagine_prodotto);
         mucca = (ImageView) findViewById(R.id.logo_contenitore);
         user = (ImageView) findViewById(R.id.image_user);
         titoloProvvisorio= "";
@@ -57,7 +57,6 @@ public class Prodotto extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent7= new Intent(Prodotto.this, aLogin.class);
                         startActivity(intent7);
-
                     }
                 });
                 adb.show();
@@ -66,89 +65,80 @@ public class Prodotto extends AppCompatActivity {
 
         titoloProvvisorio= getIntent().getExtras().getString("nomeProdotto").toString();
 
-         titolo.setText(titoloProvvisorio);
+        titolo.setText(titoloProvvisorio);
 
-         switch (titoloProvvisorio){
-             case "Caciocavallo": descrizione.setText("Descrizione 1");
-             immagine.setImageResource(R.drawable.caciocavallo);
-             prezzo.setText("€10");
-             prezzoTemp= "€10";
-             break;
+        switch (titoloProvvisorio){
+            case "Caciocavallo": descrizione.setText("Descrizione 1");
+                immagine.setImageResource(R.drawable.caciocavallo);
+                prezzo.setText("€10");
+                prezzoTemp= "€10";
+                break;
 
-             case "Formaggio Parmigiano": descrizione.setText("Descrizione 2");
-                 immagine.setImageResource(R.drawable.formaggioparmigiano);
-                 prezzo.setText("€7");
-                 prezzoTemp= "€7";
+            case "Formaggio Parmigiano": descrizione.setText("Descrizione 2");
+                immagine.setImageResource(R.drawable.formaggioparmigiano);
+                prezzo.setText("€7");
+                prezzoTemp= "€7";
+                break;
 
-                 break;
+            case "Gorgonzola Dop": descrizione.setText("Descrizione 3");
+                immagine.setImageResource(R.drawable.gorgonzoladop);
+                prezzo.setText("€15");
+                prezzoTemp= "€15";
+                break;
 
-             case "Gorgonzola Dop": descrizione.setText("Descrizione 3");
-                 immagine.setImageResource(R.drawable.gorgonzoladop);
-                 prezzo.setText("€15");
-                 prezzoTemp= "€15";
+            case "Mozzarella Dop": descrizione.setText("Descrizione 4");
+                immagine.setImageResource(R.drawable.mozzarelladop);
+                prezzo.setText("€9");
+                prezzoTemp= "€9";
+                break;
 
-                 break;
+            case "Mozzarelline": descrizione.setText("Descrizione 5");
+                immagine.setImageResource(R.drawable.mozzarelline);
+                prezzo.setText("€5");
+                prezzoTemp= "€5";
+                break;
 
-             case "Mozzarella Dop": descrizione.setText("Descrizione 4");
-                 immagine.setImageResource(R.drawable.mozzarelladop);
-                 prezzo.setText("€9");
-                 prezzoTemp= "€9";
+            case "Mozzarellona": descrizione.setText("Descrizione 6");
+                immagine.setImageResource(R.drawable.mozzarellona);
+                prezzo.setText("€17");
+                prezzoTemp= "€17";
+                break;
 
-                 break;
+            case "Pecorino": descrizione.setText("Descrizione 7");
+                immagine.setImageResource(R.drawable.pecorino);
+                prezzo.setText("€4");
+                prezzoTemp= "€4";
+                break;
 
-             case "Mozzarelline": descrizione.setText("Descrizione 5");
-                 immagine.setImageResource(R.drawable.mozzarelline);
-                 prezzo.setText("€5");
-                 prezzoTemp= "€5";
+            case "Provolone": descrizione.setText("Descrizione 8");
+                immagine.setImageResource(R.drawable.provolone);
+                prezzo.setText("€13");
+                prezzoTemp= "€13";
+                break;
 
-                 break;
+            case "Ricotta di pecora": descrizione.setText("Descrizione 9");
+                immagine.setImageResource(R.drawable.ricottadipecora);
+                prezzo.setText("€6");
+                prezzoTemp= "€6";
+                break;
 
-             case "Mozzarellona": descrizione.setText("Descrizione 6");
-                 immagine.setImageResource(R.drawable.mozzarellona);
-                 prezzo.setText("€17");
-                 prezzoTemp= "€17";
+            case "Treccia di mozzarella": descrizione.setText("Descrizione 10");
+                immagine.setImageResource(R.drawable.trecciadimozzarella);
+                prezzo.setText("€21");
+                prezzoTemp= "€21";
+                break;
+        }
 
-                 break;
+        aggiungi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-             case "Pecorino": descrizione.setText("Descrizione 7");
-                 immagine.setImageResource(R.drawable.pecorino);
-                 prezzo.setText("€4");
-                 prezzoTemp= "€4";
-
-                 break;
-
-             case "Provolone": descrizione.setText("Descrizione 8");
-                 immagine.setImageResource(R.drawable.provolone);
-                 prezzo.setText("€13");
-                 prezzoTemp= "€13";
-
-                 break;
-
-             case "Ricotta di pecora": descrizione.setText("Descrizione 9");
-                 immagine.setImageResource(R.drawable.ricottadipecora);
-                 prezzo.setText("€6");
-                 prezzoTemp= "€6";
-
-                 break;
-
-             case "Treccia di mozzarella": descrizione.setText("Descrizione 10");
-                 immagine.setImageResource(R.drawable.trecciadimozzarella);
-                 prezzo.setText("€21");
-                 prezzoTemp= "€21";
-
-                 break;
-         }
-
-         aggiungi.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-
-                 intent= new Intent(Prodotto.this, eCarrello.class);
-                 intent.putExtra("nome", titoloProvvisorio);
-                 intent.putExtra("prezzo", prezzoTemp);
-                 startActivity(intent);
-             }
-         });
+                intent= new Intent(Prodotto.this, eCarrello.class);
+                intent.putExtra("nome", titoloProvvisorio);
+                intent.putExtra("prezzo", prezzoTemp);
+                startActivity(intent);
+            }
+        });
 
     }
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,7 @@ public class dInformazioni extends AppCompatActivity {
     private Button ordini;
     private ImageView logoMucca;
     private ImageView user;
+    private ImageView numero_tel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class dInformazioni extends AppCompatActivity {
         ordini = (Button) findViewById(R.id.button_ordini3);
         logoMucca = (ImageView) findViewById(R.id.logo_manutenzione);
         user = (ImageView) findViewById(R.id.image_user);
+        numero_tel= (ImageView) findViewById(R.id.numero_telefono);
 
         user.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,10 +45,18 @@ public class dInformazioni extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         Intent intent7= new Intent(dInformazioni.this, aLogin.class);
                         startActivity(intent7);
-
                     }
                 });
                 adb.show();
+            }
+        });
+
+        numero_tel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent10 = new Intent(Intent.ACTION_DIAL);
+                intent10.setData(Uri.parse("tel:123456789"));
+                startActivity(intent10);
             }
         });
 
