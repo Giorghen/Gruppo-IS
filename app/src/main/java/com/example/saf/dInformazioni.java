@@ -1,10 +1,14 @@
 package com.example.saf;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +24,7 @@ public class dInformazioni extends AppCompatActivity {
     private ImageView logoMucca;
     private ImageView user;
     private ImageView numero_tel;
+    private static final int REQUEST_CALL= 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +59,14 @@ public class dInformazioni extends AppCompatActivity {
         numero_tel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent10 = new Intent(Intent.ACTION_DIAL);
-                intent10.setData(Uri.parse("tel:123456789"));
-                startActivity(intent10);
+                if (ContextCompat.checkSelfPermission(dInformazioni.this,
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(dInformazioni.this,
+                            new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+                }
+                else{
+                    startActivity(new Intent(Intent.ACTION_CALL, Uri.parse("tel:1234567899")));
+                }
             }
         });
 
