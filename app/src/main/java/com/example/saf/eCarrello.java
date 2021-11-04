@@ -7,8 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -29,6 +31,7 @@ public class eCarrello extends AppCompatActivity {
     private ImageView immagine;
     private String titoloProvvisorio;
     private ArrayList<Tipo> prodotti= new ArrayList<Tipo>();
+    private Spinner sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,11 @@ public class eCarrello extends AppCompatActivity {
         titolo= (TextView) findViewById(R.id.nome_prodotto1);
         prezzo= (TextView) findViewById(R.id.prezzo_prodotto1);
         immagine= (ImageView) findViewById(R.id.immagine_prodotto1);
+        sp= (Spinner) findViewById(R.id.spinner);
         titoloProvvisorio= "";
+
+
+        sp.setSelection(1);
 
 
         acquista.setOnClickListener(new View.OnClickListener() {
