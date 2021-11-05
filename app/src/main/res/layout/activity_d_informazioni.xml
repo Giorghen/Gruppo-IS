@@ -72,7 +72,6 @@
         android:background="@drawable/telefono"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/barra_bottoni"
         app:layout_constraintBottom_toBottomOf="@id/Tabella"/>
 
     <LinearLayout
@@ -135,10 +134,12 @@
 
     <TableLayout
         android:id="@+id/Tabella"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:gravity="center"
-        android:layout_marginLeft="5dp"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewManuten">
@@ -146,52 +147,32 @@
         <TableRow
             android:id="@+id/prima_riga"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/bordo5"
             android:orientation="vertical">
 
+
             <TextView
-                android:id="@+id/text_nome_azienda"
+                android:id="@+id/text_nome"
                 android:layout_width="100dp"
-                android:layout_height="75dp"
-                android:background="@drawable/bordo1"
+                android:layout_height="50dp"
+                android:background="@drawable/bordo5"
                 android:gravity="center"
-                android:text="@string/nomi"
+                android:text="@string/nome1"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_indirizzo"
-                android:layout_width="100dp"
-                android:layout_height="75dp"
-                android:background="@drawable/bordo1"
+                android:id="@+id/text_dipendente"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="@string/indirizzi"
+                android:text="@string/nome_azienda"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/text_email"
-                android:layout_width="100dp"
-                android:layout_height="75dp"
-                android:background="@drawable/bordo1"
-                android:gravity="center"
-                android:text="@string/email"
-                android:textColor="#F5000000"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/text_giorni"
-                android:layout_width="100dp"
-                android:layout_height="75dp"
-                android:background="@drawable/bordo1"
-                android:gravity="center"
-                android:text="@string/giorni"
-                android:textColor="#F5000000"
-                android:textSize="18sp"
-                android:textStyle="bold" />
 
         </TableRow>
 
@@ -199,52 +180,28 @@
             android:id="@+id/seconda_riga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bordo5"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/nome_macchina"
+                android:id="@+id/nome_cognome"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:background="@drawable/bordo2"
+                android:background="@drawable/bordo5"
                 android:gravity="center"
-                android:text="rth"
+                android:text="@string/indirizzo1"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_basso"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
+                android:id="@+id/text_dipendente0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="rte"
+                android:text="@string/indirizzo_azienda"
                 android:textColor="#000000"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="131dp"
-                tools:layout_editor_absoluteY="233dp" />
-
-            <TextView
-                android:id="@+id/text_buon"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:text="et"
-                android:textColor="#F5000000"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/text_buo"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:text="tgo"
-                android:textColor="#F5000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -253,50 +210,28 @@
             android:id="@+id/terza_riga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bordo5"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/nome_macchina1"
+                android:id="@+id/nome_orari1"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:background="@drawable/bordo2"
+                android:background="@drawable/bordo5"
                 android:gravity="center"
-                android:text="gar"
+                android:text="@string/email1"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_alto"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
+                android:id="@+id/text_dipendente1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="frgt"
+                android:text="@string/email_azienda"
                 android:textColor="#000000"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/text_revision"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:text="rggh"
-                android:textColor="#F5000000"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/text_revisio"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:text="tyre"
-                android:textColor="#F5000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
         </TableRow>
@@ -305,52 +240,30 @@
             android:id="@+id/quarta_riga"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/bordo5"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/nome_macchina3"
+                android:id="@+id/nome_orari2"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
-                android:background="@drawable/bordo2"
+                android:background="@drawable/bordo5"
                 android:gravity="center"
-                android:text="uyuu"
+                android:text="@string/giorno1"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/text_guasto"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
+                android:id="@+id/text_dipendente2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="bhy"
+                android:text="@string/giorni_azienda"
+                android:layout_marginLeft="10dp"
                 android:textColor="#000000"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/text_costant"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:text="mio"
-                android:textColor="#F5000000"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/text_costante"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bordo2"
-                android:gravity="center"
-                android:text="yuio"
-                android:textColor="#F5000000"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
         </TableRow>
 
     </TableLayout>

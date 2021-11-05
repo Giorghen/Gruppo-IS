@@ -148,22 +148,20 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="Nome"
+                android:text="@string/nome2"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_dipendente"
-                android:layout_width="match_parent"
+                android:layout_width="297dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text=""
+                android:text="@string/nome_utente"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
-
 
         </TableRow>
 
@@ -180,7 +178,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="Cognome"
+                android:text="@string/cognome2"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -189,9 +187,8 @@
                 android:id="@+id/text_dipendente0"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text=""
+                android:text="@string/cognome_utente"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -203,7 +200,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bordo3"
-
             android:orientation="vertical">
 
             <TextView
@@ -212,7 +208,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="Indirizzo"
+                android:text="@string/indirizzo2"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -221,9 +217,8 @@
                 android:id="@+id/text_dipendente1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text=""
+                android:text="@string/indirizzo_utente"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -243,7 +238,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="Email"
+                android:text="@string/email2"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -252,9 +247,8 @@
                 android:id="@+id/text_dipendente2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:text=""
+                android:text="@string/email_utente"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -274,7 +268,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/bordo3"
                 android:gravity="center"
-                android:text="Password"
+                android:text="@string/password2"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -283,9 +277,12 @@
                 android:id="@+id/dipendenti_vuoto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/bordo4"
                 android:gravity="center"
-                android:textColor="#000000" />
+                android:text="@string/password_utente"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
 
         </TableRow>
 
