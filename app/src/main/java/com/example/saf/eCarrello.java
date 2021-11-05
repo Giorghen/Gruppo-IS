@@ -31,6 +31,7 @@ public class eCarrello extends AppCompatActivity {
     private TextView prezzo;
     private ImageView immagine;
     private String titoloProvvisorio;
+    private String prezzoProvvisorio;
     private ArrayList<Tipo> prodotti= new ArrayList<Tipo>();
     private Spinner sp;
 
@@ -51,9 +52,7 @@ public class eCarrello extends AppCompatActivity {
         immagine= (ImageView) findViewById(R.id.immagine_prodotto1);
         sp= (Spinner) findViewById(R.id.spinner);
         titoloProvvisorio= "";
-
-
-        sp.setSelection(1);
+        prezzoProvvisorio= "";
 
 
         acquista.setOnClickListener(new View.OnClickListener() {
@@ -127,46 +126,77 @@ public class eCarrello extends AppCompatActivity {
             switch (titoloProvvisorio){
                 case "Caciocavallo": immagine.setImageResource(R.drawable.caciocavallo);
                     prezzo.setText("€10");
+                    prezzoProvvisorio= "10";
                     break;
 
                 case "Formaggio Parmigiano": immagine.setImageResource(R.drawable.formaggioparmigiano);
                     prezzo.setText("€7");
+                    prezzoProvvisorio= "7";
                     break;
 
                 case "Gorgonzola Dop": immagine.setImageResource(R.drawable.gorgonzoladop);
                     prezzo.setText("€15");
+                    prezzoProvvisorio= "15";
                     break;
 
                 case "Mozzarella Dop": immagine.setImageResource(R.drawable.mozzarelladop);
                     prezzo.setText("€9");
+                    prezzoProvvisorio= "9";
                     break;
 
                 case "Mozzarelline": immagine.setImageResource(R.drawable.mozzarelline);
                     prezzo.setText("€5");
+                    prezzoProvvisorio= "5";
                     break;
 
                 case "Mozzarellona": immagine.setImageResource(R.drawable.mozzarellona);
                     prezzo.setText("€17");
+                    prezzoProvvisorio= "17";
                     break;
 
                 case "Pecorino": immagine.setImageResource(R.drawable.pecorino);
                     prezzo.setText("€4");
+                    prezzoProvvisorio= "4";
                     break;
 
                 case "Provolone": immagine.setImageResource(R.drawable.provolone);
                     prezzo.setText("€13");
+                    prezzoProvvisorio= "13";
                     break;
 
                 case "Ricotta di pecora": immagine.setImageResource(R.drawable.ricottadipecora);
                     prezzo.setText("€6");
+                    prezzoProvvisorio= "6";
                     break;
 
                 case "Treccia di mozzarella": immagine.setImageResource(R.drawable.trecciadimozzarella);
                     prezzo.setText("€21");
+                    prezzoProvvisorio= "21";
                     break;
             }
 
+            sp.setSelection(1);
+
+            sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    int n=0, m=0, x=0;
+                    String p= "";
+                    n= Integer.valueOf(sp.getSelectedItem().toString());
+                    m= Integer.valueOf(prezzoProvvisorio);
+                    x= n * m;
+                    p= String.valueOf(x);
+                    prezzo.setText(p);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
         }
+
 
 
     }
