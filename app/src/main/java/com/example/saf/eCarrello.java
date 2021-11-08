@@ -59,6 +59,10 @@ public class eCarrello extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(eCarrello.this, acquisto.class);
+                if (getIntent().getStringExtra("nome") != null){
+                    titoloProvvisorio= getIntent().getExtras().getString("nome");
+                    intent.putExtra("nomeProd", titoloProvvisorio);
+                }
                 startActivity(intent);
             }
         });

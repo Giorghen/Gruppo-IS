@@ -109,13 +109,6 @@ public class DataBase extends SQLiteOpenHelper {
 
         long result= db.insert(TABLE_NAME, null, cn);
 
-        if (result == -1){
-            Toast.makeText(context, "Errore inserimento ordine", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            Toast.makeText(context, "Successo inserimento ordine", Toast.LENGTH_SHORT).show();
-        }
-
     }
 
     /**

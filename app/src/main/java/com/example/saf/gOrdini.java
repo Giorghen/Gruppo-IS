@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class gOrdini extends AppCompatActivity {
 
@@ -18,6 +19,9 @@ public class gOrdini extends AppCompatActivity {
     private Button utente;
     private ImageView logo;
     private ImageView user;
+    private ImageView img_ordine;
+    private TextView titolo_ordine;
+    private String nome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +34,48 @@ public class gOrdini extends AppCompatActivity {
         utente = (Button) findViewById(R.id.button_utente6);
         logo = (ImageView) findViewById(R.id.logo_rubrica);
         user = (ImageView) findViewById(R.id.image_user);
+        img_ordine= (ImageView) findViewById(R.id.immagine_ordine);
+        titolo_ordine= (TextView) findViewById(R.id.nome_ordine);
+        nome= "";
+
+        if (getIntent().getStringExtra("nomeP") != null){
+            nome= getIntent().getExtras().getString("nomeP");
+
+            titolo_ordine.setText(nome);
+
+            switch (nome){
+                case "Caciocavallo": img_ordine.setImageResource(R.drawable.caciocavallo);
+                break;
+
+                case "Formaggio Parmigiano": img_ordine.setImageResource(R.drawable.formaggioparmigiano);
+                    break;
+
+                case "Gorgonzola Dop": img_ordine.setImageResource(R.drawable.gorgonzoladop);
+                break;
+
+                case "Mozzarella Dop": img_ordine.setImageResource(R.drawable.mozzarelladop);
+                break;
+
+                case "Mozzarelline": img_ordine.setImageResource(R.drawable.mozzarelline);
+                    break;
+
+                case "Mozzarellona": img_ordine.setImageResource(R.drawable.mozzarellona);
+                    break;
+
+                case "Pecorino": img_ordine.setImageResource(R.drawable.pecorino);
+                    break;
+
+                case "Provolone": img_ordine.setImageResource(R.drawable.provolone);
+                    break;
+
+                case "Ricotta di pecora": img_ordine.setImageResource(R.drawable.ricottadipecora);
+                    break;
+
+                case "Treccia di mozzarella": img_ordine.setImageResource(R.drawable.trecciadimozzarella);
+                    break;
+
+            }
+        }
 
         catalogo.setOnClickListener(new View.OnClickListener() {
             @Override
