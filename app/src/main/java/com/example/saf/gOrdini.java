@@ -13,15 +13,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import org.w3c.dom.Document;
-import org.xml.sax.InputSource;
-
-import java.io.StringReader;
 import java.util.ArrayList;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
 public class gOrdini extends AppCompatActivity {
 
@@ -56,17 +48,18 @@ public class gOrdini extends AppCompatActivity {
         i= 1;
 
         DataBase db= new DataBase(gOrdini.this);
-        Cursor c= db.visualizzazioneTabellaOrdini();
+        li= db.visualizzazioneTabellaOrdini();
 
-            System.out.println ("name: " + c.getString(0));
+        for (int i= 0; i < li.size(); i++)
+            System.out.println ("Prodotto: " + li.get(i).toString());
 
-        /*TextView text = new TextView(this);
+        TextView text = new TextView(this);
         text.setId(i);
-        text.setText("CIAOOOOOOOO");
+        //text.setText();
         text.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
         text.setTextColor(Color.parseColor("#D81B60"));
         text.setTextSize(25);
-        l.addView(text);*/
+        l.addView(text);
 
 
         if (getIntent().getStringExtra("nomeP") != null){
@@ -79,7 +72,7 @@ public class gOrdini extends AppCompatActivity {
                 break;
 
                 case "Formaggio Parmigiano": img_ordine.setImageResource(R.drawable.formaggioparmigiano);
-                    break;
+                break;
 
                 case "Gorgonzola Dop": img_ordine.setImageResource(R.drawable.gorgonzoladop);
                 break;
@@ -88,22 +81,22 @@ public class gOrdini extends AppCompatActivity {
                 break;
 
                 case "Mozzarelline": img_ordine.setImageResource(R.drawable.mozzarelline);
-                    break;
+                break;
 
                 case "Mozzarellona": img_ordine.setImageResource(R.drawable.mozzarellona);
-                    break;
+                break;
 
                 case "Pecorino": img_ordine.setImageResource(R.drawable.pecorino);
-                    break;
+                break;
 
                 case "Provolone": img_ordine.setImageResource(R.drawable.provolone);
-                    break;
+                break;
 
                 case "Ricotta di pecora": img_ordine.setImageResource(R.drawable.ricottadipecora);
-                    break;
+                break;
 
                 case "Treccia di mozzarella": img_ordine.setImageResource(R.drawable.trecciadimozzarella);
-                    break;
+                break;
 
             }
         }

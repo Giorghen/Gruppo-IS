@@ -63,6 +63,7 @@ public class DataBase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        onCreate(db);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
         onCreate(db);
     }
@@ -136,16 +137,22 @@ public class DataBase extends SQLiteOpenHelper {
      * Restituisce tutto il conetenuto della tabella ordini
      * @return cursor
      */
-    public Cursor visualizzazioneTabellaOrdini(){
+    public ArrayList<String> visualizzazioneTabellaOrdini() {
 
-        String query= "SELECT " + COLUMN_NOME_PROD + " FROM " + TABLE_NAME;
         SQLiteDatabase db= this.getReadableDatabase();
-        Cursor cursor= null;
+        ArrayList<String> lista= new ArrayList<String>();
+        Cursor cursor= db.rawQuery("SELECT " + COLUMN_NOME_PROD + " FROM " + TABLE_NAME, new String[]{});
 
-        if (db != null){
-            cursor= db.rawQuery(query, null);
+        if (cursor != null) {
+            cursor.moveToFirst();
         }
-        return cursor;
+        System.out.println("Dimensione: " + cursor.getCount());
+        do {
+            String nome = cursor.getString(0);
+            lista.add(nome);
+
+        } while(cursor.moveToNext());
+        return lista;
     }
 
     /**
