@@ -28,7 +28,6 @@ public class cCatalogo extends AppCompatActivity {
     private Button prod8;
     private Button prod9;
     private Button prod10;
-    private DataBase db;
 
 
 

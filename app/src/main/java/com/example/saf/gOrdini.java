@@ -5,11 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
+
+import java.io.StringReader;
+import java.util.ArrayList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 public class gOrdini extends AppCompatActivity {
 
@@ -21,7 +33,10 @@ public class gOrdini extends AppCompatActivity {
     private ImageView user;
     private ImageView img_ordine;
     private TextView titolo_ordine;
+    private LinearLayout l;
     private String nome;
+    private int i;
+    private ArrayList<String> li;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +51,23 @@ public class gOrdini extends AppCompatActivity {
         user = (ImageView) findViewById(R.id.image_user);
         img_ordine= (ImageView) findViewById(R.id.immagine_ordine);
         titolo_ordine= (TextView) findViewById(R.id.nome_ordine);
+        l= (LinearLayout) findViewById(R.id.lin);
         nome= "";
+        i= 1;
+
+        DataBase db= new DataBase(gOrdini.this);
+        Cursor c= db.visualizzazioneTabellaOrdini();
+
+            System.out.println ("name: " + c.getString(0));
+
+        /*TextView text = new TextView(this);
+        text.setId(i);
+        text.setText("CIAOOOOOOOO");
+        text.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
+        text.setTextColor(Color.parseColor("#D81B60"));
+        text.setTextSize(25);
+        l.addView(text);*/
+
 
         if (getIntent().getStringExtra("nomeP") != null){
             nome= getIntent().getExtras().getString("nomeP");

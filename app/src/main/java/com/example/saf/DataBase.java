@@ -138,7 +138,7 @@ public class DataBase extends SQLiteOpenHelper {
      */
     public Cursor visualizzazioneTabellaOrdini(){
 
-        String query= "SELECT * FROM " + TABLE_NAME;
+        String query= "SELECT " + COLUMN_NOME_PROD + " FROM " + TABLE_NAME;
         SQLiteDatabase db= this.getReadableDatabase();
         Cursor cursor= null;
 
