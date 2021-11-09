@@ -7,8 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,8 +25,6 @@ public class gOrdini extends AppCompatActivity {
     private Button utente;
     private ImageView logo;
     private ImageView user;
-    private ImageView img_ordine;
-    private TextView titolo_ordine;
     private LinearLayout l;
     private String nome;
     private int i;
@@ -41,8 +41,6 @@ public class gOrdini extends AppCompatActivity {
         utente = (Button) findViewById(R.id.button_utente6);
         logo = (ImageView) findViewById(R.id.logo_rubrica);
         user = (ImageView) findViewById(R.id.image_user);
-        img_ordine= (ImageView) findViewById(R.id.immagine_ordine);
-        titolo_ordine= (TextView) findViewById(R.id.nome_ordine);
         l= (LinearLayout) findViewById(R.id.lin);
         li= new ArrayList<String>();
         nome= "";
@@ -51,61 +49,74 @@ public class gOrdini extends AppCompatActivity {
 
         i= db.numeroProdottiSalvati();
 
-        if(i > -1){
+        if(i > 0){
             li= db.visualizzazioneTabellaOrdini();
-
-            for (int i= 0; i < li.size(); i++)
-                System.out.println ("Prodotto: " + li.get(i));
         }
 
+        if (li.size() > 0){
+            for (int i= 0; i < li.size(); i++){
+                TextView text = new TextView(this);
+                String nome= li.get(i);
+                text.setText(nome);
+                LinearLayout.LayoutParams params= new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                params.setMargins(10, 10, 0, 0);
+                text.setLayoutParams(params);
+                text.setTypeface(Typeface.DEFAULT_BOLD);
+                text.setTextColor(Color.parseColor("#D81B60"));
+                text.setTextSize(25);
+                l.addView(text);
 
-        TextView text = new TextView(this);
-        text.setId(i);
-        //text.setText();
-        text.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        text.setTextColor(Color.parseColor("#D81B60"));
-        text.setTextSize(25);
-        l.addView(text);
+                ImageView img= new ImageView(this);
+                LinearLayout.LayoutParams params1= new LinearLayout.LayoutParams(150, 150);
+                params1.setMargins(10, 10, 0, 0);
+                img.setLayoutParams(params1);
+                switch (nome){
+                    case "Caciocavallo": img.setImageResource(R.drawable.caciocavallo);
+                        l.addView(img);
+                        break;
 
+                    case "Formaggio Parmigiano": img.setImageResource(R.drawable.formaggioparmigiano);
+                        l.addView(img);
+                        break;
 
-        if (getIntent().getStringExtra("nomeP") != null){
-            nome= getIntent().getExtras().getString("nomeP");
+                    case "Gorgonzola Dop": img.setImageResource(R.drawable.gorgonzoladop);
+                        l.addView(img);
+                        break;
 
-            titolo_ordine.setText(nome);
+                    case "Mozzarella Dop": img.setImageResource(R.drawable.mozzarelladop);
+                        l.addView(img);
+                        break;
 
-            switch (nome){
-                case "Caciocavallo": img_ordine.setImageResource(R.drawable.caciocavallo);
-                break;
+                    case "Mozzarelline": img.setImageResource(R.drawable.mozzarelline);
+                        l.addView(img);
+                        break;
 
-                case "Formaggio Parmigiano": img_ordine.setImageResource(R.drawable.formaggioparmigiano);
-                break;
+                    case "Mozzarellona": img.setImageResource(R.drawable.mozzarellona);
+                        l.addView(img);
+                        break;
 
-                case "Gorgonzola Dop": img_ordine.setImageResource(R.drawable.gorgonzoladop);
-                break;
+                    case "Pecorino": img.setImageResource(R.drawable.pecorino);
+                        l.addView(img);
+                        break;
 
-                case "Mozzarella Dop": img_ordine.setImageResource(R.drawable.mozzarelladop);
-                break;
+                    case "Provolone": img.setImageResource(R.drawable.provolone);
+                        l.addView(img);
+                        break;
 
-                case "Mozzarelline": img_ordine.setImageResource(R.drawable.mozzarelline);
-                break;
+                    case "Ricotta di pecora": img.setImageResource(R.drawable.ricottadipecora);
+                        l.addView(img);
+                        break;
 
-                case "Mozzarellona": img_ordine.setImageResource(R.drawable.mozzarellona);
-                break;
+                    case "Treccia di mozzarella": img.setImageResource(R.drawable.trecciadimozzarella);
+                        l.addView(img);
+                        break;
 
-                case "Pecorino": img_ordine.setImageResource(R.drawable.pecorino);
-                break;
-
-                case "Provolone": img_ordine.setImageResource(R.drawable.provolone);
-                break;
-
-                case "Ricotta di pecora": img_ordine.setImageResource(R.drawable.ricottadipecora);
-                break;
-
-                case "Treccia di mozzarella": img_ordine.setImageResource(R.drawable.trecciadimozzarella);
-                break;
-
+                }
             }
         }
+
+
+
 
         catalogo.setOnClickListener(new View.OnClickListener() {
             @Override

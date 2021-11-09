@@ -168,7 +168,7 @@ public class DataBase extends SQLiteOpenHelper {
         SQLiteDatabase db= this.getReadableDatabase();
         Cursor cursor= null;
         cursor= db.rawQuery(query, new String[]{});
-        int i= -1;
+        int i= 0;
 
         if (cursor != null){
             i=cursor.getCount();
