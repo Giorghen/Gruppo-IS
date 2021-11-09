@@ -44,14 +44,20 @@ public class gOrdini extends AppCompatActivity {
         img_ordine= (ImageView) findViewById(R.id.immagine_ordine);
         titolo_ordine= (TextView) findViewById(R.id.nome_ordine);
         l= (LinearLayout) findViewById(R.id.lin);
+        li= new ArrayList<String>();
         nome= "";
-        i= 1;
 
         DataBase db= new DataBase(gOrdini.this);
-        li= db.visualizzazioneTabellaOrdini();
 
-        for (int i= 0; i < li.size(); i++)
-            System.out.println ("Prodotto: " + li.get(i).toString());
+        i= db.numeroProdottiSalvati();
+
+        if(i > -1){
+            li= db.visualizzazioneTabellaOrdini();
+
+            for (int i= 0; i < li.size(); i++)
+                System.out.println ("Prodotto: " + li.get(i));
+        }
+
 
         TextView text = new TextView(this);
         text.setId(i);

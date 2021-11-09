@@ -63,7 +63,6 @@ public class DataBase extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
-        onCreate(db);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME2);
         onCreate(db);
     }
@@ -137,22 +136,46 @@ public class DataBase extends SQLiteOpenHelper {
      * Restituisce tutto il conetenuto della tabella ordini
      * @return cursor
      */
-    public ArrayList<String> visualizzazioneTabellaOrdini() {
+    public ArrayList<String> visualizzazioneTabellaOrdini(){
 
+        String query= "SELECT " + COLUMN_NOME_PROD + " FROM " + TABLE_NAME;
+        ArrayList<String> list= new ArrayList<String>();
         SQLiteDatabase db= this.getReadableDatabase();
-        ArrayList<String> lista= new ArrayList<String>();
-        Cursor cursor= db.rawQuery("SELECT " + COLUMN_NOME_PROD + " FROM " + TABLE_NAME, new String[]{});
+        Cursor cursor= null;
+        cursor= db.rawQuery(query, new String[]{});
 
-        if (cursor != null) {
+        if (cursor != null){
             cursor.moveToFirst();
         }
-        System.out.println("Dimensione: " + cursor.getCount());
-        do {
-            String nome = cursor.getString(0);
-            lista.add(nome);
 
-        } while(cursor.moveToNext());
-        return lista;
+        do{
+            String nome= cursor.getString(0);
+            list.add(nome);
+        }while (cursor.moveToNext());
+
+        return list;
+    }
+
+    /**
+     * Restituisce il numero di prodotti salvati nel database: se esistono prodotti
+     * salvati restituisce il numero di prodotti, se non esistono prodotti salvati
+     * restituisce -1
+     * @return numero prodotti
+     */
+    public int numeroProdottiSalvati(){
+
+        String query= "SELECT " + COLUMN_NOME_PROD + " FROM " + TABLE_NAME;
+        SQLiteDatabase db= this.getReadableDatabase();
+        Cursor cursor= null;
+        cursor= db.rawQuery(query, new String[]{});
+        int i= -1;
+
+        if (cursor != null){
+            i=cursor.getCount();
+        }
+
+        return i;
+
     }
 
     /**
