@@ -40,11 +40,12 @@
             android:hint="@string/nome_titolare"
             android:textColorHint="#FD000000">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
                 android:id="@+id/nome_titolare0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp" />
+                android:layout_marginBottom="10dp"
+                android:text="" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/numero_carta"
@@ -53,7 +54,7 @@
                 android:hint="@string/numero_carta"
                 android:textColorHint="#000000">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/numero_carta0"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -69,7 +70,7 @@
                 android:hint="@string/cvv"
                 android:textColorHint="#FD000000">
 
-                <com.google.android.material.textfield.TextInputEditText
+                <EditText
                     android:id="@+id/cvv0"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -83,11 +84,12 @@
                     android:hint="@string/indirizzo_consenga"
                     android:textColorHint="#000000">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                    <EditText
                         android:id="@+id/consegna0"
+                        android:text=""
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp" />
+                        android:layout_marginBottom="10dp"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
