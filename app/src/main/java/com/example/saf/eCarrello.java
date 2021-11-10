@@ -190,7 +190,7 @@ public class eCarrello extends AppCompatActivity {
                     m= Integer.valueOf(prezzoProvvisorio);
                     x= n * m;
                     p= String.valueOf(x);
-                    prezzo.setText(p);
+                    prezzo.setText("€ " + p);
                 }
 
                 @Override
